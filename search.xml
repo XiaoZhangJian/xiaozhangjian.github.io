@@ -4,9 +4,73 @@
   
     
     <entry>
-      <title><![CDATA[Hexo使用之初体验]]></title>
+      <title><![CDATA[Hexo 和 Github Pages 搭建个人博客]]></title>
       <url>http://yoursite.com/2016/07/29/2016-07-29-hexo-hello%20world/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p><img src="/images/meizi/meizi1.jpg" alt="福利图"></p>
+<p>看看妹子解解乏，呼呼，刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！<br>展示地址：<a href="http://www.kimsblog.me" target="_blank" rel="external">kim’s blog</a> 有兴趣的朋友可以看下，下面教大家怎么使用 hexo + github pages 搭建博客~~~ （以MAC系统演示）</p>
+<a id="more"></a>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><h4 id="Github-账号"><a href="#Github-账号" class="headerlink" title="Github 账号"></a>Github 账号</h4><ul>
+<li>Github是什么?各位<code>老司机</code>不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github 是什么是可耻的！</li>
+<li>创建项目存放博客<ul>
+<li>登录Github账号，进入主页面，看右上角<img src="/images/github/github new project1.png" alt="Github new project1"></li>
+<li>仓库名格式: <code>username.github.io</code> username 代表你的github用户名保持一致，最后点击 <input type="button" value="Create repository "> 按钮<br><br><img src="/images/github/github new project2.png" alt="Github new project2"></li>
+<li>进入这个页面创建成功！<br><br><img src="/images/github/github new project3.png" alt="Github new project3"></li>
+</ul>
+</li>
+</ul>
+<h4 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h4><ul>
+<li>使用git主要是把hexo的代码上传到githu上，xcode自带git，如果没安装就去<a href="https://git-scm.com/download" target="_blank" rel="external"><code>Git 官网</code></a>下载</li>
+<li><p>环境配置：</p>
+<ul>
+<li><a href="https://git-scm.com/download" target="_blank" rel="external">Git 官网</a>下载安装包<img src="/images/git/git page download.png" alt="git download page"></li>
+<li>下载好，双击打开</li>
+<li><p>检查SSH Key，查看是否已经存在key，请把已有key备份</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd ~/.ssh</div><div class="line">$ ls</div></pre></td></tr></table></figure>
+</li>
+<li><p>生成SSH key</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;xxxx@xxx.com&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>把SSH Key 添加到Github</p>
+<ul>
+<li>登录github账号,点击头像旁小三角, 选择 Settings<img src="/images/github/github settings1.png" alt="Github setting"></li>
+<li>进入设置页面，左侧选择 <code>SSH and GPG keys</code> 会看到这个 <img src="/images/github/github new ssh key1.png" alt="Github new ssh key page"><br> 点击 <code>New SSH Key</code>出现 <img src="/images/github/github new ssh key2.png" alt="Github new ssh key page2"> title 随意填写，key 输入 <code>id_rsa.pub</code>文件中内容,然后保存</li>
+</ul>
+</li>
+<li><p>测试连接</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh git@github.com</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>设置个人信息</p>
+<pre><code>$ git config --global user.name &quot;xxx&quot;
+$ git config --glbal user.email &quot;xxxx@xxx.com&quot;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h4 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h4><ul>
+<li>使用node 主要用来生成静态页面，<a href="https://nodejs.org/en/" target="_blank" rel="external"><code>Node 官网</code></a></li>
+<li>环境配置：<ul>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node 官网</a>下载安装包<img src="/images/node/node page download.png" alt=""></li>
+<li>双击打开安装包，<br><img src="/images/node/node install.png" alt="node install"> <br>安装 Pkg 文件，一路 Next 就完成安装！</li>
+</ul>
+</li>
+<li>检测：<ul>
+<li>终端命令： <code>$ node -v</code> </li>
+<li>显示版本证明安装成功！<br>        <img src="/images/node/node check.png" alt="node check"> <h4 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h4></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>环境配置：<ul>
+<li>确定Git 和 Node 都安装好，才能安装 hexo</li>
+<li>安装命令：<code>$ npm install hexo-cli -g</code></li>
+<li>查看hexo命令： <code>$ hexo help</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><h4 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h4><p>#### </p>
+]]></content>
     </entry>
     
     <entry>
