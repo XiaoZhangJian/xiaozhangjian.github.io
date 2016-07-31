@@ -123,7 +123,7 @@
 <meta property="og:image" content="http://yoursite.com/images/node/node check.png">
 <meta property="og:image" content="http://yoursite.com/images/hexo/hexo init blog.png">
 <meta property="og:image" content="http://yoursite.com/images/hexo/hexo blog page.png">
-<meta property="og:updated_time" content="2016-07-31T08:53:14.000Z">
+<meta property="og:updated_time" content="2016-07-31T09:23:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 快速搭建个人博客">
 <meta name="twitter:description" content="前言看看妹子解解乏，呼呼，刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！我的博客地址：kim’s blog 有兴趣的朋友可以看下
@@ -256,7 +256,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="javascript:;" class="popup-trigger">
+            <a href="javascript:;" class="st-search-show-outputs">
           
             
             搜索
@@ -269,12 +269,19 @@
   
     <div class="site-search">
       
-  <div class="popup">
- <span class="search-icon fa fa-search"></span>
- <input type="text" id="local-search-input">
- <div id="local-search-result"></div>
- <span class="popup-btn-close">close</span>
-</div>
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'VqFJzoGMM4YsLss4ih46','2.0.0');
+</script>
+
 
 
     </div>
@@ -367,8 +374,8 @@
 
           
               &nbsp; | &nbsp;
-              <span class="page-pv"><i class="fa fa-file-o"></i>
-              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              <span class="page-pv">热度
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>°C
               </span>
           
         </div>
@@ -412,6 +419,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git -S</div><div class="line">## 最后使用Hexo指令发布到Github</div><div class="line">$ hexo d -g</div></pre></td></tr></table></figure>
 <p>这样既可以直接访问，这样就可以直接访问 <a href="http://xiaozhangjian.github.io" target="_blank" rel="external">http://xiaozhangjian.github.io</a> 就可以访问了，我的github账号名称是xiaozhangjian,改成你的github账户名！</p>
 <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>感觉自己默认的主题不好看，可以去 <a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo 主题</a> 挑选一种自己喜欢的，按照文档修改下即可！、</p>
+<!--
+<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>-->
 
       
     </div>
@@ -485,28 +494,24 @@
 
     <div class="post-spread">
       
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_tqq"></a>
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_cqq"></a>
-  <a class="jiathis_button_douban"></a>
-  <a class="jiathis_button_renren"></a>
-  <a class="jiathis_button_qzone"></a>
-  <a class="jiathis_button_kaixin001"></a>
-  <a class="jiathis_button_copy"></a>
-  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-  var jiathis_config={
-    hideMore:false
-  }
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
+        <div class="ds-share flat" data-thread-key="2016/07/29/2016-07-29-hexo-hello world/"
+     data-title="Hexo 快速搭建个人博客"
+     data-content=""
+     data-url="http://yoursite.com/2016/07/29/2016-07-29-hexo-hello world/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
       
     </div>
   </div>
@@ -608,15 +613,6 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.google.com" target="_blank" title="Google">
-                  
-                    <i class="fa fa-fw fa-google"></i>
-                  
-                  Google
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
                 <a href="https://www.zhihu.com/people/kim-67-79" target="_blank" title="zhihu">
                   
                     <i class="fa fa-fw fa-zhihu"></i>
@@ -641,7 +637,7 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://example.com/" title="李四" target="_blank">李四</a>
+                  <a href="" title="test1" target="_blank">test1</a>
                 </li>
               
             </ul>
