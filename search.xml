@@ -35,14 +35,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git -S</div><div class="line">## 最后使用Hexo指令发布到Github</div><div class="line">$ hexo d -g</div></pre></td></tr></table></figure>
 <p>这样既可以直接访问，这样就可以直接访问 <a href="http://xiaozhangjian.github.io" target="_blank" rel="external">http://xiaozhangjian.github.io</a> 就可以访问了，我的github账号名称是xiaozhangjian,改成你的github账户名！</p>
 <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>感觉自己默认的主题不好看，可以去 <a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo 主题</a> 挑选一种自己喜欢的，按照文档修改下即可！、</p>
-<!--
-<div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>-->
-<h2 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h2><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=420400437&auto=1&height=66"></iframe>
-
-
-
-
-
+<!--## 音乐-->
+<!--<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=420400437&auto=1&height=66"></iframe>-->
 ]]></content>
     </entry>
     
