@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[Hexo 快速搭建个人博客]]></title>
       <url>http://www.kimsblog.me/2016/07/29/2016-07-29-hexo-hello%20world/</url>
-      <content type="html"><![CDATA[<p><img src="/images/meizi/meizi1.jpg" alt="福利图"></p>
+      <content type="html"><![CDATA[<p><meta name="description" content="Hexo + GitHub 快速搭建自己的博客"><br><img src="/images/meizi/meizi1.jpg" alt="福利图"></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>看看妹子解解乏，呼呼，刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！<br>我的博客地址：<a href="http://www.kimsblog.me">kim’s blog</a> 有兴趣的朋友可以看下</p>
 <p>福利图来自：<a href="http://gank.io/" target="_blank" rel="external">干货集中营</a><br><a id="more"></a></p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="Github-账号"><a href="#Github-账号" class="headerlink" title="Github 账号"></a>Github 账号</h3><h4 id="Github是什么-各位老司机不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github-是什么是可耻的！"><a href="#Github是什么-各位老司机不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github-是什么是可耻的！" class="headerlink" title="Github是什么?各位老司机不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github 是什么是可耻的！"></a>Github是什么?各位<code>老司机</code>不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github 是什么是可耻的！</h4><h4 id="创建项目存放博客"><a href="#创建项目存放博客" class="headerlink" title="创建项目存放博客"></a>创建项目存放博客</h4><ul>
