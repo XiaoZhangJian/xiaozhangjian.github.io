@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Hexo 快速搭建个人博客]]></title>
-      <url>http://www.kimsblog.me/2016/07/29/2016-07-29-hexo-hello%20world/</url>
+      <url>http://www.kimsblog.me/2016/08/07/2016-07-29-hexo-hello%20world/</url>
       <content type="html"><![CDATA[<p><meta name="description" content="Hexo + GitHub 快速搭建自己的博客"><br><img src="/images/meizi/meizi1.jpg" alt="福利图"></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>看看妹子解解乏，呼呼，刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！<br>我的博客地址：<a href="http://www.kimsblog.me">kim’s blog</a> 有兴趣的朋友可以看下</p>
 <p>福利图来自：<a href="http://gank.io/" target="_blank" rel="external">干货集中营</a><br><a id="more"></a></p>
@@ -37,6 +37,25 @@
 <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>感觉自己默认的主题不好看，可以去 <a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo 主题</a> 挑选一种自己喜欢的，按照文档修改下即可！、</p>
 <!--## 音乐-->
 <!--<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=420400437&auto=1&height=66"></iframe>-->
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于获取android6.0的mac地址]]></title>
+      <url>http://www.kimsblog.me/2016/07/28/2016-08-07-android-%E8%8E%B7%E5%8F%96mac%E5%9C%B0%E5%9D%80/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p> 最近接触6.0,发现使用单纯的<code>wifiManager.getConnectionInfo().getMacAddress();</code>方法获取不到MAc地址。后来Google一下发现 Google对硬件信息的访问，其管控更加严格。SD 卡的读写，除了权限声明之外，还应该动态请求，否则就会被禁止。至于 MAC 网络地址的获取，相应的 API 返回的最新结果都是 <code>02:00:00:00:00:00</code> 这个固定值。可以参见 <a href="http://stackoverflow.com/questions/33159224/getting-mac-address-in-android-6-0" target="_blank" rel="external">Getting MAC address in Android 6.0</a>。<br>按照官方解释，这是为了<code>更好的数据保护</code>，可以参见<a href="https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-hardware-id" target="_blank" rel="external"> Android 6.0 变化</a>一文中 <code>Access to Hardware Identifier</code> 一节。</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="获取-MAC-的传统方法："><a href="#获取-MAC-的传统方法：" class="headerlink" title="获取 MAC 的传统方法："></a>获取 MAC 的传统方法：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">final WifiManager wifiManager = (WifiManager) getApplication()</div><div class="line">				.getApplicationContext().getSystemService(Context.WIFI_SERVICE);</div><div class="line">final String wifiMACaddress = wifiManager.getConnectionInfo()</div><div class="line">				.getMacAddress();</div></pre></td></tr></table></figure>
+<p>然而这种方法在<code>6.0</code>上并不好使,那怎么办呢?</p>
+<p><img src="http://img.blog.csdn.net/20160512135937593" alt="这里写图片描述"></p>
+<p>查询资料找到了相应的解决方法:<br>  使用Java获取设备网络设备信息的API——NetworkInterface.getNetworkInterfaces() ——仍然可以间接地获取到MAC地址。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">// 有兴趣的朋友可以看下NetworkInterface在Android FrameWork中怎么实现的</div><div class="line">	public static String macAddress() throws SocketException &#123;</div><div class="line">	        String address = null;</div><div class="line">	        // 把当前机器上的访问网络接口的存入 Enumeration集合中</div><div class="line">	        Enumeration&lt;NetworkInterface&gt; interfaces = NetworkInterface.getNetworkInterfaces();</div><div class="line">	        while (interfaces.hasMoreElements()) &#123;</div><div class="line">	            NetworkInterface netWork = interfaces.nextElement();</div><div class="line">	            // 如果存在硬件地址并可以使用给定的当前权限访问，则返回该硬件地址（通常是 MAC）。 </div><div class="line">	            byte[] by = netWork.getHardwareAddress();</div><div class="line">	            if (by == null || by.length == 0) &#123;</div><div class="line">	                continue;</div><div class="line">	            &#125;</div><div class="line">	            StringBuilder builder = new StringBuilder();</div><div class="line">	            for (byte b : by) &#123;</div><div class="line">	                builder.append(String.format(&quot;%02X:&quot;, b));</div><div class="line">	            &#125;</div><div class="line">	            if (builder.length() &gt; 0) &#123;</div><div class="line">	            	builder.deleteCharAt(builder.length() - 1);</div><div class="line">	            &#125;</div><div class="line">	            String mac = builder.toString();</div><div class="line">	            Log.d(&quot;mac&quot;, &quot;interfaceName=&quot;+netWork.getName()+&quot;, mac=&quot;+mac);</div><div class="line">	            // 从路由器上在线设备的MAC地址列表，可以印证设备Wifi的 name 是 wlan0</div><div class="line">	            if (netWork.getName().equals(&quot;wlan0&quot;)) &#123;</div><div class="line">	                Log.d(&quot;mac&quot;, &quot; interfaceName =&quot;+netWork.getName()+&quot;, mac=&quot;+mac);</div><div class="line">	                address = mac;</div><div class="line">	            &#125;</div><div class="line">	        &#125;</div><div class="line">	        return address;</div><div class="line">	    &#125;</div></pre></td></tr></table></figure>
+<p><strong>运行的结果:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">05-09 18:39:31.528: D/mac(5132): interfaceName=wlan0, mac=8C:BE:BE:BD:EC:0E</div><div class="line">05-09 18:39:31.528: D/mac(5132): interfaceName=wlan0, mac=8C:BE:BE:BD:EC:0E</div><div class="line">05-09 18:39:31.528: D/mac(5132): interfaceName=p2p0, mac=8E:BE:BE:BD:EC:0E</div><div class="line">05-09 18:39:31.538: D/mac(5132): interfaceName=dummy0, mac=42:35:AD:88:CE:D2</div><div class="line">05-09 18:39:31.538: D/mac(5132): interfaceName=usbnet0, mac=52:D9:15:FA:64:1A</div><div class="line">05-09 18:39:31.538: D/mac(5132): interfaceName=rmnet0, mac=C6:76:E0:64:56:AC</div></pre></td></tr></table></figure>
+<p></p>
+<p>这样就可以正常的获取到6.0的mac地址了!希望能帮助大家</p>
 ]]></content>
     </entry>
     
