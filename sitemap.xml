@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.kimsblog.me/resume/index.html</loc>
+    
+    <lastmod>2017-07-11T05:09:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.kimsblog.me/project/index.html</loc>
     
     <lastmod>2017-05-31T02:21:57.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://www.kimsblog.me/tags/index.html</loc>
     
     <lastmod>2017-05-31T02:00:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.kimsblog.me/resume/index.html</loc>
-    
-    <lastmod>2017-05-30T09:20:20.000Z</lastmod>
     
   </url>
   
