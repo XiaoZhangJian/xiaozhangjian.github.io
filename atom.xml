@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kimsblog.me/"/>
-  <updated>2017-04-22T15:44:07.000Z</updated>
+  <updated>2017-07-21T05:35:06.000Z</updated>
   <id>http://www.kimsblog.me/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Android Studio 遇见的问题总汇</title>
+    <link href="http://www.kimsblog.me/2017/07/21/2017-07-21-android-%E4%BD%BF%E7%94%A8Android%20Studio%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://www.kimsblog.me/2017/07/21/2017-07-21-android-使用Android Studio遇见的问题/</id>
+    <published>2017-07-21T05:23:01.000Z</published>
+    <updated>2017-07-21T05:35:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>主要记录一些，自己在使用Android 遇见的问题记录下解决方法（记忆力不太好）</p>
+<a id="more"></a>
+<h4 id="Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录"><a href="#Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录" class="headerlink" title="Android Studio 打包JAR 的时候在build/intermediates/bundles/未生成release目录"></a>Android Studio 打包JAR 的时候在<code>build/intermediates/bundles/</code>未生成release目录</h4><p>一言不合我就甩图：</p>
+<p><img src="../images/problem/releasenot.png" alt="release不存在的图片"></p>
+<p>解决方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">   </div><div class="line">    publishNonDefault true  // 添加上这句话重新Build就可以了</div><div class="line"></div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要记录一些，自己在使用Android 遇见的问题记录下解决方法（记忆力不太好）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://www.kimsblog.me/categories/Android/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>关于获取android6.0的mac地址</title>
