@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kimsblog.me/"/>
-  <updated>2017-07-21T05:35:06.000Z</updated>
+  <updated>2017-07-27T10:58:09.000Z</updated>
   <id>http://www.kimsblog.me/</id>
   
   <author>
@@ -20,14 +20,18 @@
     <link href="http://www.kimsblog.me/2017/07/21/2017-07-21-android-%E4%BD%BF%E7%94%A8Android%20Studio%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://www.kimsblog.me/2017/07/21/2017-07-21-android-使用Android Studio遇见的问题/</id>
     <published>2017-07-21T05:23:01.000Z</published>
-    <updated>2017-07-21T05:35:06.000Z</updated>
+    <updated>2017-07-27T10:58:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>主要记录一些，自己在使用Android 遇见的问题记录下解决方法（记忆力不太好）</p>
 <a id="more"></a>
-<h4 id="Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录"><a href="#Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录" class="headerlink" title="Android Studio 打包JAR 的时候在build/intermediates/bundles/未生成release目录"></a>Android Studio 打包JAR 的时候在<code>build/intermediates/bundles/</code>未生成release目录</h4><p>一言不合我就甩图：</p>
-<p><img src="../images/problem/releasenot.png" alt="release不存在的图片"></p>
+<h4 id="Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录"><a href="#Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录" class="headerlink" title="Android Studio 打包JAR 的时候在build/intermediates/bundles/未生成release目录"></a>Android Studio 打包JAR 的时候在<code>build/intermediates/bundles/</code>未生成release目录</h4><p>一言不合我就甩图：<br><img src=".././images/problem/releasenot.png" alt="release不存在的图片"></p>
 <p>解决方法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">android &#123;</div><div class="line">   </div><div class="line">    publishNonDefault true  // 添加上这句话重新Build就可以了</div><div class="line"></div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Android-Studio-使用Builder模式写实体类-进行混淆导致出现-父类-内部类-从而不能使用"><a href="#Android-Studio-使用Builder模式写实体类-进行混淆导致出现-父类-内部类-从而不能使用" class="headerlink" title="Android Studio 使用Builder模式写实体类 进行混淆导致出现 (父类$内部类)从而不能使用"></a>Android Studio 使用Builder模式写实体类 进行混淆导致出现 (父类$内部类)从而不能使用</h3><p>现象：</p>
+<p><img src="http://i.imgur.com/9lPaosK.png" alt=""></p>
+<p><img src="http://i.imgur.com/ebt0o3S.png" alt=""></p>
+<p>解决方法：<code>更新时间 2017-07-27 18:47:13</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">-keepattributes *Annotation*,InnerClasses #添加上 InnerClasses 即可解决</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
@@ -43,10 +47,10 @@
   
   <entry>
     <title>关于获取android6.0的mac地址</title>
-    <link href="http://www.kimsblog.me/2017/04/22/2017-04-22-android-%E8%8E%B7%E5%8F%96mac%E5%9C%B0%E5%9D%80/"/>
-    <id>http://www.kimsblog.me/2017/04/22/2017-04-22-android-获取mac地址/</id>
-    <published>2017-04-22T15:39:58.000Z</published>
-    <updated>2017-04-22T15:44:07.000Z</updated>
+    <link href="http://www.kimsblog.me/2017/05/22/2017-05-22-android-%E8%8E%B7%E5%8F%96mac%E5%9C%B0%E5%9D%80/"/>
+    <id>http://www.kimsblog.me/2017/05/22/2017-05-22-android-获取mac地址/</id>
+    <published>2017-05-21T16:00:00.000Z</published>
+    <updated>2017-07-27T02:22:20.000Z</updated>
     
     <content type="html"><![CDATA[<p> 最近接触6.0,发现使用单纯的<code>wifiManager.getConnectionInfo().getMacAddress();</code>方法获取不到MAc地址。后来Google一下发现 Google对硬件信息的访问，其管控更加严格。SD 卡的读写，除了权限声明之外，还应该动态请求，否则就会被禁止。至于 MAC 网络地址的获取，相应的 API 返回的最新结果都是 <code>02:00:00:00:00:00</code> 这个固定值。可以参见 <a href="http://stackoverflow.com/questions/33159224/getting-mac-address-in-android-6-0" target="_blank" rel="external">Getting MAC address in Android 6.0</a>。<br> 按照官方解释，这是为了<code>更好的数据保护</code>，可以参见<a href="https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-hardware-id" target="_blank" rel="external"> Android 6.0 变化</a>一文中 <code>Access to Hardware Identifier</code> 一节。</p>
 <a id="more"></a>
@@ -76,8 +80,8 @@
     <title>Hexo 快速搭建个人博客</title>
     <link href="http://www.kimsblog.me/2017/04/21/2017-04-21-hexo-hello%20world/"/>
     <id>http://www.kimsblog.me/2017/04/21/2017-04-21-hexo-hello world/</id>
-    <published>2017-04-21T15:39:49.000Z</published>
-    <updated>2017-04-22T21:59:17.000Z</updated>
+    <published>2017-04-20T16:00:00.000Z</published>
+    <updated>2017-07-27T02:22:31.000Z</updated>
     
     <content type="html"><![CDATA[<meta name="description" content="Hexo + GitHub 快速搭建自己的博客">
 
