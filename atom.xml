@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kimsblog.me/"/>
-  <updated>2017-07-27T15:17:54.000Z</updated>
+  <updated>2017-07-27T15:19:51.000Z</updated>
   <id>http://www.kimsblog.me/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Android 笔记(一) 混淆文件</title>
+    <title>Android 个人笔记之混淆配置模板</title>
     <link href="http://www.kimsblog.me/2017/07/27/2017-07-27-Android%E6%B7%B7%E6%B7%86%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/"/>
     <id>http://www.kimsblog.me/2017/07/27/2017-07-27-Android混淆配置记录/</id>
     <published>2017-07-27T14:49:30.000Z</published>
-    <updated>2017-07-27T15:17:54.000Z</updated>
+    <updated>2017-07-27T15:19:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近项目中使用的混淆，进行一个笔记记录。</p>
 <p>主要参考  <a href="http://www.jianshu.com/p/f3455ecaa56e" target="_blank" rel="external">5分钟搞定android混淆</a> </p>
