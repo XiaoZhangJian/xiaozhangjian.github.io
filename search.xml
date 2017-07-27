@@ -21,8 +21,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[使用Android Studio 遇见的问题总汇]]></title>
-      <url>http://www.kimsblog.me/2017/07/21/2017-07-21-android-%E4%BD%BF%E7%94%A8Android%20Studio%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      <title><![CDATA[Android个人笔记之工作中遇见的问题]]></title>
+      <url>http://www.kimsblog.me/2017/07/21/2017-07-21-android-%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/</url>
       <content type="html"><![CDATA[<p>主要记录一些，自己在使用Android 遇见的问题记录下解决方法（记忆力不太好）</p>
 <a id="more"></a>
 <h4 id="Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录"><a href="#Android-Studio-打包JAR-的时候在build-intermediates-bundles-未生成release目录" class="headerlink" title="Android Studio 打包JAR 的时候在build/intermediates/bundles/未生成release目录"></a>Android Studio 打包JAR 的时候在<code>build/intermediates/bundles/</code>未生成release目录</h4><p>一言不合我就甩图：<br><img src=".././images/problem/releasenot.png" alt="release不存在的图片"></p>
