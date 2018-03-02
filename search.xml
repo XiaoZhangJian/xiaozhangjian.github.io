@@ -4,6 +4,21 @@
   
     
     <entry>
+      <title><![CDATA[Go学习笔记 - 基础语法]]></title>
+      <url>http://www.kimsblog.me/2018/03/02/2018-03-02-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+      <content type="html"><![CDATA[<p>上一章已经写了简单的“Hello，World！” 的输出</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3>]]></content>
+      
+        <categories>
+            
+            <category> Go,后端 </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Go学习笔记 - 安装与环境变量]]></title>
       <url>http://www.kimsblog.me/2018/03/01/2018-03-01-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
       <content type="html"><![CDATA[<h3 id="安装-Go"><a href="#安装-Go" class="headerlink" title="安装 Go"></a>安装 Go</h3><p>安装Go语言比较简单直接进入 <a href="https://studygolang.com/dl" target="_blank" rel="external">https://studygolang.com/dl</a> 或 <a href="https://golang.org/dl/" target="_blank" rel="external">https://golang.org/dl(科学上网)</a>，下载一个跟设备相同系统的安装包安装即可。<br><a id="more"></a><br><strong>Go安装演示 OS X :</strong></p>

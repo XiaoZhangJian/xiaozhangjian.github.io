@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kimsblog.me/"/>
-  <updated>2018-03-01T07:07:40.508Z</updated>
+  <updated>2018-03-01T07:01:12.098Z</updated>
   <id>http://www.kimsblog.me/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go学习笔记 - 基础语法</title>
+    <link href="http://www.kimsblog.me/2018/03/02/2018-03-02-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>http://www.kimsblog.me/2018/03/02/2018-03-02-Go学习笔记 - 基础语法/</id>
+    <published>2018-03-02T05:46:20.000Z</published>
+    <updated>2018-03-01T07:01:12.098Z</updated>
+    
+    <content type="html"><![CDATA[<p>上一章已经写了简单的“Hello，World！” 的输出</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上一章已经写了简单的“Hello，World！” 的输出&lt;/p&gt;
+&lt;h3 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot; title=&quot;变量&quot;&gt;&lt;/a&gt;变量&lt;/h3&gt;&lt;h3 id=&quot;END&quot;&gt;&lt;a href=&quot;#END&quot; class=&quot;he
+    
+    </summary>
+    
+      <category term="Go,后端" scheme="http://www.kimsblog.me/categories/Go-%E5%90%8E%E7%AB%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Go学习笔记 - 安装与环境变量</title>
