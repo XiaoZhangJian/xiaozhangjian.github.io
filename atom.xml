@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.kimsblog.me/"/>
-  <updated>2018-03-05T06:28:34.020Z</updated>
-  <id>http://www.kimsblog.me/</id>
+  <link href="http://blog.zhangjian.io/"/>
+  <updated>2018-03-05T06:28:34.021Z</updated>
+  <id>http://blog.zhangjian.io/</id>
   
   <author>
     <name>Jason</name>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Go学习笔记 - 基础语法与流程控制</title>
-    <link href="http://www.kimsblog.me/2018/03/05/2018-03-05-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/"/>
-    <id>http://www.kimsblog.me/2018/03/05/2018-03-05-Go学习笔记 - 基础语法与流程控制/</id>
+    <link href="http://blog.zhangjian.io/2018/03/05/2018-03-05-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/"/>
+    <id>http://blog.zhangjian.io/2018/03/05/2018-03-05-Go学习笔记 - 基础语法与流程控制/</id>
     <published>2018-03-05T06:25:26.000Z</published>
-    <updated>2018-03-05T06:28:34.020Z</updated>
+    <updated>2018-03-05T06:28:34.021Z</updated>
     
     <content type="html"><![CDATA[<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><p>先上个栗子:<code>hello.go</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包。</div><div class="line">package main</div><div class="line"> </div><div class="line">import &quot;fmt&quot; // 引用的fmt 库</div><div class="line"></div><div class="line">// main 函数是执行入口</div><div class="line">func main()&#123; </div><div class="line">  fmt.Println(&quot;Hello,World!&quot;) // 输出Hello，World！</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h5 id="变量定义："><a href="#变量定义：" class="headerlink" title="变量定义："></a>变量定义：</h5><p>Go语言里面定义变量有多种方式。关键字使用<code>var</code>。<br>变量定义格式： <code>关键字(var)</code> <code>变量名(i)</code> <code>变量类型(int)</code>  与其他语言不同的是<code>变量名</code>在<code>变量类型</code>之前 。<br>go语言变量定义后要求是有一个初始值，不像Java一样定义以后是null。<br>go语言中定义变量要求比较严格，只要定义 必须使用。</p>
@@ -57,15 +57,15 @@
     
     </summary>
     
-      <category term="Go,后端" scheme="http://www.kimsblog.me/categories/Go-%E5%90%8E%E7%AB%AF/"/>
+      <category term="Go,后端" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF/"/>
     
     
   </entry>
   
   <entry>
     <title>Go学习笔记 - Beego</title>
-    <link href="http://www.kimsblog.me/2018/03/05/2018-05-15-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20Beego/"/>
-    <id>http://www.kimsblog.me/2018/03/05/2018-05-15-Go学习笔记 - Beego/</id>
+    <link href="http://blog.zhangjian.io/2018/03/05/2018-05-15-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20Beego/"/>
+    <id>http://blog.zhangjian.io/2018/03/05/2018-05-15-Go学习笔记 - Beego/</id>
     <published>2018-03-05T06:25:26.000Z</published>
     <updated>2018-05-16T08:37:38.634Z</updated>
     
@@ -113,15 +113,15 @@
     
     </summary>
     
-      <category term="Go,后端" scheme="http://www.kimsblog.me/categories/Go-%E5%90%8E%E7%AB%AF/"/>
+      <category term="Go,后端" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF/"/>
     
     
   </entry>
   
   <entry>
     <title>Go学习笔记 - 安装与环境变量</title>
-    <link href="http://www.kimsblog.me/2018/03/01/2018-03-01-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
-    <id>http://www.kimsblog.me/2018/03/01/2018-03-01-Go学习笔记 - 安装与环境变量/</id>
+    <link href="http://blog.zhangjian.io/2018/03/01/2018-03-01-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+    <id>http://blog.zhangjian.io/2018/03/01/2018-03-01-Go学习笔记 - 安装与环境变量/</id>
     <published>2018-03-01T07:03:44.000Z</published>
     <updated>2018-03-01T07:07:40.508Z</updated>
     
@@ -152,15 +152,15 @@
     
     </summary>
     
-      <category term="Go,后端" scheme="http://www.kimsblog.me/categories/Go-%E5%90%8E%E7%AB%AF/"/>
+      <category term="Go,后端" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF/"/>
     
     
   </entry>
   
   <entry>
     <title>Go学习笔记 - 初识Go</title>
-    <link href="http://www.kimsblog.me/2018/03/01/2018-03-01-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%88%9D%E8%AF%86Go/"/>
-    <id>http://www.kimsblog.me/2018/03/01/2018-03-01-Go学习笔记 - 初识Go/</id>
+    <link href="http://blog.zhangjian.io/2018/03/01/2018-03-01-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%88%9D%E8%AF%86Go/"/>
+    <id>http://blog.zhangjian.io/2018/03/01/2018-03-01-Go学习笔记 - 初识Go/</id>
     <published>2018-03-01T02:46:18.000Z</published>
     <updated>2018-03-01T07:04:09.483Z</updated>
     
@@ -180,15 +180,15 @@
     
     </summary>
     
-      <category term="Go,后端" scheme="http://www.kimsblog.me/categories/Go-%E5%90%8E%E7%AB%AF/"/>
+      <category term="Go,后端" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF/"/>
     
     
   </entry>
   
   <entry>
     <title>Axel多线程下载工具</title>
-    <link href="http://www.kimsblog.me/2017/12/01/2017-12-01-Axel%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/"/>
-    <id>http://www.kimsblog.me/2017/12/01/2017-12-01-Axel多线程下载工具/</id>
+    <link href="http://blog.zhangjian.io/2017/12/01/2017-12-01-Axel%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/"/>
+    <id>http://blog.zhangjian.io/2017/12/01/2017-12-01-Axel多线程下载工具/</id>
     <published>2017-12-01T05:34:05.000Z</published>
     <updated>2017-12-01T05:34:08.000Z</updated>
     
@@ -209,15 +209,15 @@
     
     </summary>
     
-      <category term="mac、linux、工具" scheme="http://www.kimsblog.me/categories/mac%E3%80%81linux%E3%80%81%E5%B7%A5%E5%85%B7/"/>
+      <category term="mac、linux、工具" scheme="http://blog.zhangjian.io/categories/mac%E3%80%81linux%E3%80%81%E5%B7%A5%E5%85%B7/"/>
     
     
   </entry>
   
   <entry>
     <title>Anaconda使用总结</title>
-    <link href="http://www.kimsblog.me/2017/09/10/2017-09-10-Anaconda%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.kimsblog.me/2017/09/10/2017-09-10-Anaconda入门使用/</id>
+    <link href="http://blog.zhangjian.io/2017/09/10/2017-09-10-Anaconda%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/"/>
+    <id>http://blog.zhangjian.io/2017/09/10/2017-09-10-Anaconda入门使用/</id>
     <published>2017-09-10T15:34:17.000Z</published>
     <updated>2017-09-11T01:13:44.000Z</updated>
     
@@ -252,15 +252,15 @@
     
     </summary>
     
-      <category term="深度学习" scheme="http://www.kimsblog.me/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="深度学习" scheme="http://blog.zhangjian.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
   </entry>
   
   <entry>
     <title>Android 个人笔记之混淆配置模板</title>
-    <link href="http://www.kimsblog.me/2017/07/27/2017-07-27-Android%E6%B7%B7%E6%B7%86%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/"/>
-    <id>http://www.kimsblog.me/2017/07/27/2017-07-27-Android混淆配置记录/</id>
+    <link href="http://blog.zhangjian.io/2017/07/27/2017-07-27-Android%E6%B7%B7%E6%B7%86%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/"/>
+    <id>http://blog.zhangjian.io/2017/07/27/2017-07-27-Android混淆配置记录/</id>
     <published>2017-07-27T14:49:30.000Z</published>
     <updated>2017-07-27T15:19:51.000Z</updated>
     
@@ -276,15 +276,15 @@
     
     </summary>
     
-      <category term="Android" scheme="http://www.kimsblog.me/categories/Android/"/>
+      <category term="Android" scheme="http://blog.zhangjian.io/categories/Android/"/>
     
     
   </entry>
   
   <entry>
     <title>工作生涯之稀奇古怪的BUG</title>
-    <link href="http://www.kimsblog.me/2017/07/21/2017-07-21-android-%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://www.kimsblog.me/2017/07/21/2017-07-21-android-工作中遇见的问题/</id>
+    <link href="http://blog.zhangjian.io/2017/07/21/2017-07-21-android-%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://blog.zhangjian.io/2017/07/21/2017-07-21-android-工作中遇见的问题/</id>
     <published>2017-07-21T05:23:01.000Z</published>
     <updated>2017-12-01T05:10:34.000Z</updated>
     
@@ -312,15 +312,15 @@
     
     </summary>
     
-      <category term="Android" scheme="http://www.kimsblog.me/categories/Android/"/>
+      <category term="Android" scheme="http://blog.zhangjian.io/categories/Android/"/>
     
     
   </entry>
   
   <entry>
     <title>关于获取android6.0的mac地址</title>
-    <link href="http://www.kimsblog.me/2017/05/22/2017-05-22-android-%E8%8E%B7%E5%8F%96mac%E5%9C%B0%E5%9D%80/"/>
-    <id>http://www.kimsblog.me/2017/05/22/2017-05-22-android-获取mac地址/</id>
+    <link href="http://blog.zhangjian.io/2017/05/22/2017-05-22-android-%E8%8E%B7%E5%8F%96mac%E5%9C%B0%E5%9D%80/"/>
+    <id>http://blog.zhangjian.io/2017/05/22/2017-05-22-android-获取mac地址/</id>
     <published>2017-05-21T16:00:00.000Z</published>
     <updated>2017-07-27T02:22:20.000Z</updated>
     
@@ -343,21 +343,21 @@
     
     </summary>
     
-      <category term="Android" scheme="http://www.kimsblog.me/categories/Android/"/>
+      <category term="Android" scheme="http://blog.zhangjian.io/categories/Android/"/>
     
     
   </entry>
   
   <entry>
     <title>Hexo 快速搭建个人博客</title>
-    <link href="http://www.kimsblog.me/2017/04/21/2017-04-21-hexo-hello%20world/"/>
-    <id>http://www.kimsblog.me/2017/04/21/2017-04-21-hexo-hello world/</id>
+    <link href="http://blog.zhangjian.io/2017/04/21/2017-04-21-hexo-hello%20world/"/>
+    <id>http://blog.zhangjian.io/2017/04/21/2017-04-21-hexo-hello world/</id>
     <published>2017-04-20T16:00:00.000Z</published>
     <updated>2017-07-27T02:22:31.000Z</updated>
     
     <content type="html"><![CDATA[<meta name="description" content="Hexo + GitHub 快速搭建自己的博客">
 
-<p>刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！<br>我的博客地址：<a href="http://www.kimsblog.me">kim’s blog</a> 有兴趣的朋友可以看下</p>
+<p>刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！<br>我的博客地址：<a href="http://www.kimsblog.me" target="_blank" rel="external">kim’s blog</a> 有兴趣的朋友可以看下</p>
 <a id="more"></a>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="Github-账号"><a href="#Github-账号" class="headerlink" title="Github 账号"></a>Github 账号</h3><h4 id="Github是什么-各位老司机不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github-是什么是可耻的！"><a href="#Github是什么-各位老司机不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github-是什么是可耻的！" class="headerlink" title="Github是什么?各位老司机不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github 是什么是可耻的！"></a>Github是什么?各位<code>老司机</code>不用我多说你们也懂吧，身为一个程序猿（媛）不知道Github 是什么是可耻的！</h4><h4 id="创建项目存放博客"><a href="#创建项目存放博客" class="headerlink" title="创建项目存放博客"></a>创建项目存放博客</h4><ul>
 <li>登录Github账号，进入主页面，看右上角<img src="/images/github/github new project1.png" alt="Github new project1"></li>
@@ -400,10 +400,10 @@
     
     </summary>
     
-      <category term="博客搭建" scheme="http://www.kimsblog.me/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://blog.zhangjian.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="博客搭建" scheme="http://www.kimsblog.me/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客搭建" scheme="http://blog.zhangjian.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
