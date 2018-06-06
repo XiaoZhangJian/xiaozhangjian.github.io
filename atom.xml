@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhangjian.io/"/>
-  <updated>2018-06-06T13:48:04.543Z</updated>
+  <updated>2018-06-06T13:50:46.421Z</updated>
   <id>http://blog.zhangjian.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.zhangjian.io/2018/06/06/2018-06-06-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BD%BF%E7%94%A8Delve%E8%B0%83%E8%AF%95golang%E4%BB%A3%E7%A0%81/"/>
     <id>http://blog.zhangjian.io/2018/06/06/2018-06-06-Go学习笔记-使用Delve调试golang代码/</id>
     <published>2018-06-06T13:26:24.000Z</published>
-    <updated>2018-06-06T13:48:04.543Z</updated>
+    <updated>2018-06-06T13:50:46.421Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-安装-Delve"><a href="#1-安装-Delve" class="headerlink" title="1.安装 Delve"></a>1.<strong>安装 Delve</strong></h4><p><strong>必备条件：</strong> 确保有一个合适的编译工具链</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
