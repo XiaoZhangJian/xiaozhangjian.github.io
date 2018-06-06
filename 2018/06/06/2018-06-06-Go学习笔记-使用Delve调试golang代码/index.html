@@ -1,26 +1,164 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Jason , zhangjian.kims@gmail.com"><meta name="baidu-site-verification" content="PDDVjc9fjU"><meta name="google-site-verification" content="N3t3tb-ITmySNEusz7YQ4PZggSsnHilp3Yvs7dZWrTc"><title>Go学习笔记 - 使用Delve调试go程序 · 小猿の酒馆·</title><meta name="description" content="Delve1.安装必备条件： 确保有一个合适的编译工具链
-12345xcode-select --install```	然后使用 `go get` 方式进行安装
-go get -u github.com/derekparker/delve/cmd/dlv
-123456等编译完就可以使用了。#### "><meta name="keywords" content="Hexo, Android ,Go ,区块链"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">小猿の酒馆·</a></h3><div class="description"><p>“Life is too short, don’t live the same day twice.”</p></div></div></div><ul class="social-links"><li><a href="https://api.prprpr.me/weibo/rss/5013654112"><i class="fa fa-rss"></i></a></li><li><a href="http://github.com/XiaoZhangJian"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/resume">简历</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Go学习笔记 - 使用Delve调试go程序</a></h3></div><div class="post-content"><h3 id="Delve"><a href="#Delve" class="headerlink" title="Delve"></a>Delve</h3><h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.<strong>安装</strong></h4><p><strong>必备条件：</strong> 确保有一个合适的编译工具链</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div><div class="line"></div><div class="line">```	</div><div class="line"></div><div class="line">然后使用 `go get` 方式进行安装</div></pre></td></tr></table></figure>
-<p>go get -u github.com/derekparker/delve/cmd/dlv</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">等编译完就可以使用了。</div><div class="line"></div><div class="line">#### 2. 常用命令</div><div class="line"></div><div class="line">查看可用命令</div></pre></td></tr></table></figure>
-<p>dlv -h </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">| **命令**    |     **描述** |  </div><div class="line">| :-------- | --------| </div><div class="line">|args	|打印函数参数|</div><div class="line">|break	|设置一个断点</div><div class="line">|breakpoints	|打印激活的断点信息</div><div class="line">|clear	|删除断点</div><div class="line">|clearall	|删除所有的断点</div><div class="line">|condition	|设置断点条件</div><div class="line">|continue	|运行到断点或程序终止</div><div class="line">|disassemble	|拆解器</div><div class="line">|exit	|退出debugger</div><div class="line">|frame	|在不同的框架上执行的命令</div><div class="line">|funcs	|打印函数列表|</div><div class="line">|goroutine	|显示或更改当前goroutine</div><div class="line">|goroutines	|列出程序的全部goroutines</div><div class="line">|help	|打印出帮助信息</div><div class="line">|list	|显示源代码</div><div class="line">|locals	|打印局部变量</div><div class="line">|next	|跳到下一行</div><div class="line">|on	|在遇到断点时执行一个命令</div><div class="line">|print	|评估表达式</div><div class="line">|regs	|打印CPU寄存器的内容</div><div class="line">|restart	|重启进程</div><div class="line">|set	|更改变量的值</div><div class="line">|source	|执行包含delve命令列表的文件</div><div class="line">|sources	|打印源文件列表</div><div class="line">|stack	|打印堆栈跟踪</div><div class="line">|step	|单步执行程序</div><div class="line">|step-instruction	|单步单个执行cpu指令</div><div class="line">|thread	|切换到指定的线程</div><div class="line">|threads|	打印每一个跟踪线程的信息</div><div class="line">|trace	|设置跟踪点</div><div class="line">|types	|打印类型列表</div><div class="line">|vars	|打印某个包内的(全局)变量</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### 3. 测试</div><div class="line"></div><div class="line">创建一个的实例命名：`hello.go`</div></pre></td></tr></table></figure>
-<p>package  main</p>
-<p>import “fmt”<br>func main(){<br>    fmt.Println(“Hello,World!”)<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">使用 `dlv exec hello` 进入调试</div></pre></td></tr></table></figure>
-<p>&amp; go build hello.go<br>&amp; dlv exec hello<br>Type ‘help’ for list of commands.<br>(dlv) b hello.go:7</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">设置断点: `(dlv) b xxx`</div></pre></td></tr></table></figure>
-<p>&amp; dlv exec hello<br>Type ‘help’ for list of commands.<br>(dlv) b hello.go:8<br>Breakpoint 1 set at 0x108d65d for main.main() ./hello.go:8<br>(dlv)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">查看断点： `(dlv) bp`</div></pre></td></tr></table></figure>
-<p>(dlv) bp<br>Breakpoint unrecovered-panic at 0x1025f00 for runtime.startpanic() /usr/local/Cellar/go/1.10.2/libexec/src/runtime/panic.go:588 (0)<br>    print runtime.curg._panic.arg<br>Breakpoint 1 at 0x108d65d for main.main() ./hello.go:8 (0)<br>(dlv)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">下一步/下一个断点 ： `(dlv) c `</div></pre></td></tr></table></figure>
-<p>(dlv) c</p>
-<blockquote>
-<p>main.main() ./hello.go:8 (hits goroutine(1):1 total:1) (PC: 0x108d65d)<br>Warning: debugging optimized function<br>     3:    import (<br>     4:        “fmt”<br>     5:    )<br>     6:<br>     7:    func main() {<br>=&gt;   8:        fmt.Println(“Hello,World!”)<br>     9:    }<br>(dlv)<br>Hello,World!<br>Process 22042 has exited with status 0<br>(dlv) </p>
-</blockquote>
-<p>```</p>
+1xcode-select --install
+然后使用 go get 方式进行安装
+1go get -u github.com/derekparker/delve/cmd/dlv
+等编译完就可以使用了。
+2. 常用命令查看可用命令
+1dlv"><meta name="keywords" content="Hexo, Android ,Go ,区块链"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">小猿の酒馆·</a></h3><div class="description"><p>“Life is too short, don’t live the same day twice.”</p></div></div></div><ul class="social-links"><li><a href="https://api.prprpr.me/weibo/rss/5013654112"><i class="fa fa-rss"></i></a></li><li><a href="http://github.com/XiaoZhangJian"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/resume">简历</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Go学习笔记 - 使用Delve调试go程序</a></h3></div><div class="post-content"><h3 id="Delve"><a href="#Delve" class="headerlink" title="Delve"></a>Delve</h3><h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.<strong>安装</strong></h4><p><strong>必备条件：</strong> 确保有一个合适的编译工具链</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
+<p>然后使用 <code>go get</code> 方式进行安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">go get -u github.com/derekparker/delve/cmd/dlv</div></pre></td></tr></table></figure>
+<p>等编译完就可以使用了。</p>
+<h4 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2. 常用命令"></a>2. 常用命令</h4><p>查看可用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dlv -h</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>命令</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">args</td>
+<td>打印函数参数</td>
+</tr>
+<tr>
+<td style="text-align:left">break</td>
+<td>设置一个断点</td>
+</tr>
+<tr>
+<td style="text-align:left">breakpoints</td>
+<td>打印激活的断点信息</td>
+</tr>
+<tr>
+<td style="text-align:left">clear</td>
+<td>删除断点</td>
+</tr>
+<tr>
+<td style="text-align:left">clearall</td>
+<td>删除所有的断点</td>
+</tr>
+<tr>
+<td style="text-align:left">condition</td>
+<td>设置断点条件</td>
+</tr>
+<tr>
+<td style="text-align:left">continue</td>
+<td>运行到断点或程序终止</td>
+</tr>
+<tr>
+<td style="text-align:left">disassemble</td>
+<td>拆解器</td>
+</tr>
+<tr>
+<td style="text-align:left">exit</td>
+<td>退出debugger</td>
+</tr>
+<tr>
+<td style="text-align:left">frame</td>
+<td>在不同的框架上执行的命令</td>
+</tr>
+<tr>
+<td style="text-align:left">funcs</td>
+<td>打印函数列表</td>
+</tr>
+<tr>
+<td style="text-align:left">goroutine</td>
+<td>显示或更改当前goroutine</td>
+</tr>
+<tr>
+<td style="text-align:left">goroutines</td>
+<td>列出程序的全部goroutines</td>
+</tr>
+<tr>
+<td style="text-align:left">help</td>
+<td>打印出帮助信息</td>
+</tr>
+<tr>
+<td style="text-align:left">list</td>
+<td>显示源代码</td>
+</tr>
+<tr>
+<td style="text-align:left">locals</td>
+<td>打印局部变量</td>
+</tr>
+<tr>
+<td style="text-align:left">next</td>
+<td>跳到下一行</td>
+</tr>
+<tr>
+<td style="text-align:left">on</td>
+<td>在遇到断点时执行一个命令</td>
+</tr>
+<tr>
+<td style="text-align:left">print</td>
+<td>评估表达式</td>
+</tr>
+<tr>
+<td style="text-align:left">regs</td>
+<td>打印CPU寄存器的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">restart</td>
+<td>重启进程</td>
+</tr>
+<tr>
+<td style="text-align:left">set</td>
+<td>更改变量的值</td>
+</tr>
+<tr>
+<td style="text-align:left">source</td>
+<td>执行包含delve命令列表的文件</td>
+</tr>
+<tr>
+<td style="text-align:left">sources</td>
+<td>打印源文件列表</td>
+</tr>
+<tr>
+<td style="text-align:left">stack</td>
+<td>打印堆栈跟踪</td>
+</tr>
+<tr>
+<td style="text-align:left">step</td>
+<td>单步执行程序</td>
+</tr>
+<tr>
+<td style="text-align:left">step-instruction</td>
+<td>单步单个执行cpu指令</td>
+</tr>
+<tr>
+<td style="text-align:left">thread</td>
+<td>切换到指定的线程</td>
+</tr>
+<tr>
+<td style="text-align:left">threads</td>
+<td>打印每一个跟踪线程的信息</td>
+</tr>
+<tr>
+<td style="text-align:left">trace</td>
+<td>设置跟踪点</td>
+</tr>
+<tr>
+<td style="text-align:left">types</td>
+<td>打印类型列表</td>
+</tr>
+<tr>
+<td style="text-align:left">vars</td>
+<td>打印某个包内的(全局)变量</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h4><p>创建一个的实例命名：<code>hello.go</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">package  main</div><div class="line">import &quot;fmt&quot;</div><div class="line">func main()&#123;</div><div class="line">	fmt.Println(&quot;Hello,World!&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>使用 <code>dlv exec hello</code> 进入调试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&amp; go build hello.go</div><div class="line">&amp; dlv exec hello</div><div class="line">Type &apos;help&apos; for list of commands.</div><div class="line">(dlv) b hello.go:7</div></pre></td></tr></table></figure>
+<p>设置断点: <code>(dlv) b xxx</code> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&amp; dlv exec hello</div><div class="line">Type &apos;help&apos; for list of commands.</div><div class="line">(dlv) b hello.go:8</div><div class="line">Breakpoint 1 set at 0x108d65d for main.main() ./hello.go:8</div><div class="line">(dlv)</div></pre></td></tr></table></figure>
+<p>查看断点： <code>(dlv) bp</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(dlv) bp</div><div class="line">Breakpoint unrecovered-panic at 0x1025f00 for runtime.startpanic() /usr/local/Cellar/go/1.10.2/libexec/src/runtime/panic.go:588 (0)</div><div class="line">	print runtime.curg._panic.arg</div><div class="line">Breakpoint 1 at 0x108d65d for main.main() ./hello.go:8 (0)</div><div class="line">(dlv)</div></pre></td></tr></table></figure>
+<p>下一步/下一个断点 ： <code>(dlv) c</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">(dlv) c</div><div class="line">&gt; main.main() ./hello.go:8 (hits goroutine(1):1 total:1) (PC: 0x108d65d)</div><div class="line">Warning: debugging optimized function</div><div class="line">     3:	import (</div><div class="line">     4:		&quot;fmt&quot;</div><div class="line">     5:	)</div><div class="line">     6:</div><div class="line">     7:	func main() &#123;</div><div class="line">=&gt;   8:		fmt.Println(&quot;Hello,World!&quot;)</div><div class="line">     9:	&#125;</div><div class="line">(dlv)</div><div class="line">Hello,World!</div><div class="line">Process 22042 has exited with status 0</div><div class="line">(dlv)</div></pre></td></tr></table></figure>
 <p>退出dlv ：<code>exit</code> </p>
 </div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-06-06</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Go-后端-debug/" title="Go,后端,debug">Go,后端,debug </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://blog.zhangjian.io/2018/06/06/2018-06-06-Go学习笔记-使用Delve调试golang代码/,小猿の酒馆·,Go学习笔记 - 使用Delve调试go程序,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2018/03/05/2018-03-05-Go学习笔记 - 基础语法与流程控制/" title="Go学习笔记 - 基础语法与流程控制">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
   el:'#vcomments',
