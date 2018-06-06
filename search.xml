@@ -20,12 +20,12 @@
 <p>&amp; dlv exec hello<br>Type ‘help’ for list of commands.<br>(dlv) b hello.go:8<br>Breakpoint 1 set at 0x108d65d for main.main() ./hello.go:8<br>(dlv)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">查看断点： `(dlv) bp`</div></pre></td></tr></table></figure>
 <p>(dlv) bp<br>Breakpoint unrecovered-panic at 0x1025f00 for runtime.startpanic() /usr/local/Cellar/go/1.10.2/libexec/src/runtime/panic.go:588 (0)<br>    print runtime.curg._panic.arg<br>Breakpoint 1 at 0x108d65d for main.main() ./hello.go:8 (0)<br>(dlv)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">下一步/下一个断点 ： `(dlv) c `</div><div class="line"></div><div class="line">`</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">下一步/下一个断点 ： `(dlv) c `</div></pre></td></tr></table></figure>
 <p>(dlv) c</p>
 <blockquote>
 <p>main.main() ./hello.go:8 (hits goroutine(1):1 total:1) (PC: 0x108d65d)<br>Warning: debugging optimized function<br>     3:    import (<br>     4:        “fmt”<br>     5:    )<br>     6:<br>     7:    func main() {<br>=&gt;   8:        fmt.Println(“Hello,World!”)<br>     9:    }<br>(dlv)<br>Hello,World!<br>Process 22042 has exited with status 0<br>(dlv) </p>
 </blockquote>
-<p>````</p>
+<p>```</p>
 <p>退出dlv ：<code>exit</code> </p>
 ]]></content>
       
