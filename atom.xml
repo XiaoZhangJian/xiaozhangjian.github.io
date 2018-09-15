@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhangjian.io/"/>
-  <updated>2018-06-06T13:50:46.421Z</updated>
+  <updated>2018-09-15T11:54:29.413Z</updated>
   <id>http://blog.zhangjian.io/</id>
   
   <author>
@@ -14,6 +14,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git常用命令小记</title>
+    <link href="http://blog.zhangjian.io/2018/09/15/2018-09-15-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://blog.zhangjian.io/2018/09/15/2018-09-15-git常用命令小记/</id>
+    <published>2018-09-15T11:50:33.000Z</published>
+    <updated>2018-09-15T11:54:29.413Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong># git基本操作</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">mkdir test</div><div class="line">cd test</div><div class="line"># git初始化本地仓库</div><div class="line">git init </div><div class="line"># 创建一个readme文件</div><div class="line">touch README.md</div><div class="line"># 添加新创建的文件到本地仓库</div><div class="line">git add .</div><div class="line"># 把新的文件提交到本地仓库</div><div class="line">git commit -m &apos;提交说明&apos;</div><div class="line"># 连接github远程仓库</div><div class="line">git remote add origin git@github.com:XiaoZhangJian/Test.git</div><div class="line"># 把本地仓库提交到github的主分支上</div><div class="line">git push origin master </div><div class="line"></div><div class="line"># 创建分支</div><div class="line">git branch test-branch</div><div class="line"></div><div class="line"># 查看分支</div><div class="line">git branch</div><div class="line"></div><div class="line"># 切换分支</div><div class="line">git checkout test-branch </div><div class="line"></div><div class="line">touch test.txt</div><div class="line">git add .</div><div class="line">git commit -m &apos;change&apos;</div><div class="line"># 把新的文件提交到分支</div><div class="line">git push origin test-branch </div><div class="line"></div><div class="line"># 子分支与主分支合并</div><div class="line">git checkout master </div><div class="line">git merge  origin/test-branch</div><div class="line">git push origin master</div></pre></td></tr></table></figure></p>
+<p><strong># git如何pull request 操作</strong></p>
+<blockquote>
+<p>举例：小黑有个开源项目，在小黄使用时发现一个bug，于是小黄决定修复这个bug并把代码提交给小黑审核，如果小黑审核通过就会把代码并入主项目。</p>
+</blockquote>
+<p><code>注：ForkDemo(开源项目)、小黑(ForkDemo作者)、小黄(ForkDemo贡献者)</code></p>
+<p>小黄该如何操作呢？</p>
+<ul>
+<li>小黄先登录到自己的github并fork小黑的项目到自己仓库中</li>
+<li><p>小黄把fork到项目clone到本地</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone http://github.com/小黄/ForkDemo.git</div></pre></td></tr></table></figure>
+</li>
+<li><p>进入到本地的项目内并修复bug</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd 小黄/ForkDemo/</div></pre></td></tr></table></figure>
+</li>
+<li><p>将 <code>小黑/ForkDemo</code> 的远程仓库设置为本地 <code>小黄/ForkDemo</code> 的upstream remote</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git remote add upstream http://github.com/小黑/ForkDemo.git</div><div class="line"></div><div class="line">Bug修复中.....</div></pre></td></tr></table></figure>
+</li>
+<li><p>将修改的文件提交</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &apos;修复了xxx Bug&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>把本地代码推送到自己fork的远程库中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin master</div></pre></td></tr></table></figure>
+</li>
+<li><p>在github上的 小黄/ForkDemo内创建 pr 提交给小黑审核 <strong>如图操作</strong>：<br><img src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fv9davh3r6j31kw0a040u.jpg" alt="image"></p>
+</li>
+</ul>
+<p><img src="http://wx4.sinaimg.cn/mw690/0060lm7Tly1fv9dviu1bdj31kw10eaij.jpg" alt="image"></p>
+<p><img src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fv9dy8f4qej319i0o8why.jpg" alt="image"></p>
+<p>然后小黄等待小黑review代码后觉得可取，就会并入主分支即可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;# git基本操作&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;lin
+    
+    </summary>
+    
+      <category term="git,github" scheme="http://blog.zhangjian.io/categories/git-github/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Go学习笔记 - 使用Delve调试go程序</title>
