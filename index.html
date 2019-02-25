@@ -1,27 +1,131 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Jason , zhangjian.kims@gmail.com"><meta name="baidu-site-verification" content="PDDVjc9fjU"><meta name="google-site-verification" content="N3t3tb-ITmySNEusz7YQ4PZggSsnHilp3Yvs7dZWrTc"><title>小猿の酒馆·</title><meta name="description" content="“Life is too short, don’t live the same day twice.”"><meta name="keywords" content="Hexo, Android ,Go ,Golang,git"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">小猿の酒馆·</a></h3><div class="description"><p>“Life is too short, don’t live the same day twice.”</p></div></div></div><ul class="social-links"><li><a href="https://api.prprpr.me/weibo/rss/5013654112"><i class="fa fa-rss"></i></a></li><li><a href="http://github.com/XiaoZhangJian"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a class="current" href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/resume">简历</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2018/09/15/2018-09-15-git常用命令小记/">Git常用命令小记</a></h3></div><div class="post-content"><p># git基本操作12345678910111213141516171819202122232425262728293031323334mkdir testcd test# git初始化本地仓库git init # 创建一个readme文件touch README.md# 添加新创建的文件到本地仓库git add...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-09-15</span><i class="fa fa-tag"></i><a class="tag" href="/categories/git-github/" title="git,github">git,github </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2018/06/06/2018-06-06-Go学习笔记-使用Delve调试golang代码/">Go学习笔记 - 使用Delve调试go程序</a></h3></div><div class="post-content"><p>1.安装 Delve必备条件： 确保有一个合适的编译工具链
-1xcode-select --install
-然后使用 go get 方式进行安装
-1go get -u github.com/derekparker/delve/cmd/dlv
-等编译完就可以使用了。
-2. 常用命令查看可用命令
-1dlv -h
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>小猿の酒馆·</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="“Life is too short, don’t live the same day twice.”">
+<meta property="og:type" content="website">
+<meta property="og:title" content="小猿の酒馆·">
+<meta property="og:url" content="http://blog.zhangjian.io/index.html">
+<meta property="og:site_name" content="小猿の酒馆·">
+<meta property="og:description" content="“Life is too short, don’t live the same day twice.”">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小猿の酒馆·">
+<meta name="twitter:description" content="“Life is too short, don’t live the same day twice.”">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+    <body class="home-body">
+    
+  
+      <div id="container" class="container">
+        <div class="home">
+  <div class="content">
+    <div class="profile">
+      <h1 class="nickname">小猿の酒馆·</h1>
+      <div class="description">
+        <p><p>When you want to give up, think about what makes you insist on here. – kobe Bryant.</p>
+</p>
+      </div>
+    </div>
+    <hr/>
+  </div>
+</div>
+    <ul class="footer-links">
+      
+        <li>
+	  
+	    <a href="/archives/">Blog</a>
+	  
+        </li>
+      
+        <li>
+	  
+	    <a href="https://github.com/XiaoZhangJian">GitHub</a>
+	  
+        </li>
+      
+        <li>
+	  
+	    <a href="/resume">Resume</a>
+	  
+        </li>
+      
+        <li>
+	  
+	    <a href="/about/">About</a>
+	  
+        </li>
+      
+    </ul>
+
+      </div>
+      
+  <footer id="footer" class="home-footer footer">
+    <div id="copyright" class="copyright">
+      &copy; 2019 Jason  Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme &copy; <a href="https://github.com/geekplux" target="_blank">GeekPlux</a>
+
+      </div>
+    </footer>
+
+      
 
 
-...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-06-06</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Go-后端-debug/" title="Go,后端,debug">Go,后端,debug </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2018/03/05/2018-03-05-Go学习笔记 - 基础语法与流程控制/">Go学习笔记 - 基础语法与流程控制</a></h3></div><div class="post-content"><p>基础语法先上个栗子:hello.go123456789// package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包。package main import &quot;fmt&quot; // 引用的fmt 库// main 函数是执行入口func main()&#1...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-03-05</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Go-后端/" title="Go,后端">Go,后端 </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2018/03/01/2018-03-01-Go学习笔记 - 安装与环境变量/">Go学习笔记 - 安装与环境变量</a></h3></div><div class="post-content"><p>安装 Go安装Go语言比较简单直接进入 https://studygolang.com/dl 或 https://golang.org/dl(科学上网)，下载一个跟设备相同系统的安装包安装即可。Go安装演示 OS X :
 
 
-下载好，双击安装一直next 即可安装完成
-开发工具 Goland  ： https:/...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-03-01</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Go-后端/" title="Go,后端">Go,后端 </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2018/03/01/2018-03-01-Go学习笔记 - 初识Go/">Go学习笔记 - 初识Go</a></h3></div><div class="post-content"><p>起源Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java HotSpot...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-03-01</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Go-后端/" title="Go,后端">Go,后端 </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/12/01/2017-12-01-Axel多线程下载工具/">Axel多线程下载工具</a></h3></div><div class="post-content"><p>
-下载地址： http://rudix.org/packages/axel.html
 
-语法：
-​    axel [options] url1 url2 url…
-选项：123456789101112-- max-speed=x,-s x 最高速度x--num-connections=x, -n x 连接数x-...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-12-01</span><i class="fa fa-tag"></i><a class="tag" href="/categories/mac、linux、工具/" title="mac、linux、工具">mac、linux、工具 </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/09/10/2017-09-10-Anaconda入门使用/">Anaconda使用总结</a></h3></div><div class="post-content"><p>序
-Anaconda是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。Anaconda利用工具/命令conda来进行package和environment的管理，并且已经包含...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-09-10</span><i class="fa fa-tag"></i><a class="tag" href="/categories/深度学习/" title="深度学习">深度学习 </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/07/27/2017-07-27-Android混淆配置记录/">Android 个人笔记之混淆配置模板</a></h3></div><div class="post-content"><p>最近项目中使用的混淆，进行一个笔记记录。
-主要参考  5分钟搞定android混淆 
 
-配置模板1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-07-27</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Android/" title="Android">Android </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/07/21/2017-07-21-android-工作中遇见的问题/">工作生涯之稀奇古怪的BUG</a></h3></div><div class="post-content"><p>主要记录一些，自己在工作/学习遇见的问题记录下解决方法（记忆力不太好）
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "YgV7zDiGcw5aSQEvwdE6YYkw-gzGzoHsz",
+          appKey: "mkEexIJkspfuNymkt6owTOQk",
+          placeholder: "Just go go",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
 
-Android Studio 打包JAR 的时候在build/intermediates/bundles/未生成release目录现象：
-解决方法：
-123456android &#123;       publishNonDefault ...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-07-21</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Android/" title="Android">Android </a></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2017/05/22/2017-05-22-android-获取mac地址/">关于获取android6.0的mac地址</a></h3></div><div class="post-content"><p> 最近接触6.0,发现使用单纯的wifiManager.getConnectionInfo().getMacAddress();方法获取不到MAc地址。后来Google一下发现 Google对硬件信息的访问，其管控更加严格。SD 卡的读写，除了权限声明之外，还应该动态请求，否则就会被禁止。至于 MAC 网络地址的...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-05-22</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Android/" title="Android">Android </a></div></div></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/page/2/">下一页</a></li></ul></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/jquery.baidu.js"></script></body></html>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

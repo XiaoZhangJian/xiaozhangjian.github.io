@@ -1,4 +1,90 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Jason , zhangjian.kims@gmail.com"><meta name="baidu-site-verification" content="PDDVjc9fjU"><meta name="google-site-verification" content="N3t3tb-ITmySNEusz7YQ4PZggSsnHilp3Yvs7dZWrTc"><title>Go学习笔记 - 初识Go · 小猿の酒馆·</title><meta name="description" content="起源Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java "><meta name="keywords" content="Hexo, Android ,Go ,Golang,git"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">小猿の酒馆·</a></h3><div class="description"><p>“Life is too short, don’t live the same day twice.”</p></div></div></div><ul class="social-links"><li><a href="https://api.prprpr.me/weibo/rss/5013654112"><i class="fa fa-rss"></i></a></li><li><a href="http://github.com/XiaoZhangJian"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/resume">简历</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Go学习笔记 - 初识Go</a></h3></div><div class="post-content"><h3 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h3><p>Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java HotSpot 虚拟机；Rob Pike，Go 语言项目总负责人，贝尔实验室 Unix 团队成员，参与的项目包括 Plan 9，Inferno 操作系统和 Limbo 编程语言；Ken Thompson，贝尔实验室 Unix 团队成员，C 语言、Unix 和 Plan 9 的创始人之一，与 Rob Pike 共同开发了 UTF-8 字符集规范。自 2008 年 1 月起，Ken Thompson 就开始研发一款以 C 语言为目标结果的编译器来拓展 Go 语言的设计思想。<br><a id="more"></a><br><strong>这是一个由计算机领域 <code>“发明之父”</code> 所组成的黄金团队，他们对系统编程语言，操作系统和并行都有着非常深刻的见解</strong></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Go学习笔记 - 初识Go | 小猿の酒馆·</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="起源Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java HotSpot 虚拟机；Rob Pike，Go 语言项目总负责人，贝尔实验室 Unix 团队成员，参">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Go学习笔记 - 初识Go">
+<meta property="og:url" content="http://blog.zhangjian.io/2018/03/01/2018-03-01-Go学习笔记 - 初识Go/index.html">
+<meta property="og:site_name" content="小猿の酒馆·">
+<meta property="og:description" content="起源Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java HotSpot 虚拟机；Rob Pike，Go 语言项目总负责人，贝尔实验室 Unix 团队成员，参">
+<meta property="og:image" content="http://blog.zhangjian.io/images/go/1.1.designers_of_Go.jpg">
+<meta property="og:updated_time" content="2018-03-01T07:04:09.483Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Go学习笔记 - 初识Go">
+<meta name="twitter:description" content="起源Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java HotSpot 虚拟机；Rob Pike，Go 语言项目总负责人，贝尔实验室 Unix 团队成员，参">
+<meta name="twitter:image" content="http://blog.zhangjian.io/images/go/1.1.designers_of_Go.jpg">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-2018-03-01-Go学习笔记 - 初识Go" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname">小猿の酒馆·</h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/resume">Resume</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav nav-left">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/resume">Resume</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Go学习笔记 - 初识Go
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <h3 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h3><p>Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java HotSpot 虚拟机；Rob Pike，Go 语言项目总负责人，贝尔实验室 Unix 团队成员，参与的项目包括 Plan 9，Inferno 操作系统和 Limbo 编程语言；Ken Thompson，贝尔实验室 Unix 团队成员，C 语言、Unix 和 Plan 9 的创始人之一，与 Rob Pike 共同开发了 UTF-8 字符集规范。自 2008 年 1 月起，Ken Thompson 就开始研发一款以 C 语言为目标结果的编译器来拓展 Go 语言的设计思想。<br><a id="more"></a><br><strong>这是一个由计算机领域 <code>“发明之父”</code> 所组成的黄金团队，他们对系统编程语言，操作系统和并行都有着非常深刻的见解</strong></p>
 <p><img src="/images/go/1.1.designers_of_Go.jpg" alt=""><br>图 1.1 Go 语言设计者：<strong>Griesemer</strong>、<strong>Thompson</strong> 和 <strong>Pike</strong></p>
 <p>在 2008 年年中，Go 语言的设计工作接近尾声，一些员工开始以全职工作状态投入到这个项目的编译器和运行实现上。Ian Lance Taylor 也加入到了开发团队中，并于 2008 年 5 月创建了一个 gcc 前端。</p>
 <p>Russ Cox 加入开发团队后着手语言和类库方面的开发，也就是 Go 语言的标准包。在 2009 年 10 月 30 日，Rob Pike 以 Google Techtalk 的形式第一次向人们宣告了 Go 语言的存在。</p>
@@ -6,13 +92,152 @@
 <p>作为一个开源项目，Go 语言借助开源社区的有生力量达到快速地发展，并吸引更多的开发者来使用并改善它。自该开源项目发布以来，超过 200 名非谷歌员工的贡献者对 Go 语言核心部分提交了超过 1000 个修改建议。在过去的 18 个月里，又有 150 开发者贡献了新的核心代码。这俨然形成了世界上最大的开源团队，并使该项目跻身 Ohloh 前 2% 的行列。大约在 2011 年 4 月 10 日，谷歌开始抽调员工进入全职开发 Go 语言项目。开源化的语言显然能够让更多的开发者参与其中并加速它的发展速度。Andrew Gerrand 在 2010 年加入到开发团队中成为共同开发者与支持者。</p>
 <p>在 Go 语言在 2010 年 1 月 8 日被 <code>Tiobe</code>（闻名于它的编程语言流行程度排名）宣布为 “2009 年年度语言” 后，引起各界很大的反响。目前 Go 语言在这项排名中的最高记录是在 2010 年 2 月创下的第13名，流行程度 1778%。</p>
 <p> 摘自 <a href="https://love2.io/@funkkiid/doc/the-way-to-go_ZH_CN/eBook/01.1.md" target="_blank" rel="external">Go入门指南</a></p>
-<h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-03-01</span><i class="fa fa-tag"></i><a class="tag" href="/categories/Go-后端/" title="Go,后端">Go,后端 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://blog.zhangjian.io/2018/03/01/2018-03-01-Go学习笔记 - 初识Go/,小猿の酒馆·,Go学习笔记 - 初识Go,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2018/03/01/2018-03-01-Go学习笔记 - 安装与环境变量/" title="Go学习笔记 - 安装与环境变量">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2017/12/01/2017-12-01-Axel多线程下载工具/" title="Axel多线程下载工具">下一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
-  el:'#vcomments',
-  notify:false || false, 
-  verify:false|| false, 
-  app_id:'YgV7zDiGcw5aSQEvwdE6YYkw-gzGzoHsz',
-  app_key:'mkEexIJkspfuNymkt6owTOQk',
-  placeholder:'ヾﾉ≧∀≦)o来啊，快活啊!',
-  path: window.location.pathname,
-  avatar:'monsterid'
-})</script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/jquery.baidu.js"></script></body></html>
+<h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3>
+      
+      
+        <div id="donate" class="donate">
+          <a id="github" href="https://github.com/XiaoZhangJian" target="_blank" class="pos-f tr3" title="Github"></a>
+          <div id="DonateText" class="tr3">Donate</div>
+          <ul id="donateBox" class="list pos-f tr3">
+            <!-- <li id="PayPal"><a href="https://www.paypal.me/geekplux" target="_blank">PayPal</a></li> -->
+            <!-- <li id="BTC" data-footnote="Copy addres and show QRCode"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li> -->
+            <li id="AliPay">AliPay</li>
+            <li id="WeChat">WeChat</li>
+          </ul>
+          <div id="QRBox" class="pos-f left-100">
+            <div id="BTCQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/bitcoin.png)"></div>
+            <div id="AliPayQR" class="MainBox" style="background-image: url(https://raw.githubusercontent.com/wiki/XiaoZhangJian/ImageCarsh/alipayQR.png)"></div>
+            <div id="WeChatQR" class="MainBox" style="background-image: url(https://raw.githubusercontent.com/wiki/XiaoZhangJian/ImageCarsh/wechatQR.png)"></div>
+          </div>
+          <!-- Bitcoin 账号 -->
+          <input id="btc-key" type="text" value="1AVngxh56oLvAzXsEFnzccUohZdHswjC7j" readonly="readonly">
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2018/03/01/2018-03-01-Go学习笔记 - 初识Go/" class="article-date">
+  <time datetime="2018-03-01T02:46:18.000Z" itemprop="datePublished">2018-03-01</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Go-后端/">Go,后端</a>
+  </div>
+
+
+          </li>
+        
+        
+      
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2018/03/01/2018-03-01-Go学习笔记 - 安装与环境变量/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Go学习笔记 - 安装与环境变量
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/01/2017-12-01-Axel多线程下载工具/" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Axel多线程下载工具</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>When you want to give up, think about what makes you insist on here. – kobe Bryant.</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "YgV7zDiGcw5aSQEvwdE6YYkw-gzGzoHsz",
+          appKey: "mkEexIJkspfuNymkt6owTOQk",
+          placeholder: "Just go go",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

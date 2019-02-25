@@ -1,6 +1,101 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Jason , zhangjian.kims@gmail.com"><meta name="baidu-site-verification" content="PDDVjc9fjU"><meta name="google-site-verification" content="N3t3tb-ITmySNEusz7YQ4PZggSsnHilp3Yvs7dZWrTc"><title>Hexo 快速搭建个人博客 · 小猿の酒馆·</title><meta name="description" content="刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！我的博客地址：kim’s blog 有兴趣的朋友可以看下
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo 快速搭建个人博客 | 小猿の酒馆·</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！我的博客地址：kim’s blog 有兴趣的朋友可以看下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 快速搭建个人博客">
+<meta property="og:url" content="http://blog.zhangjian.io/2017/04/21/2017-04-21-hexo-hello world/index.html">
+<meta property="og:site_name" content="小猿の酒馆·">
+<meta property="og:description" content="刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！我的博客地址：kim’s blog 有兴趣的朋友可以看下">
+<meta property="og:image" content="http://blog.zhangjian.io/images/github/github new project1.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/github/github new project2.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/github/github new project3.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/git/git page download.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/github/github settings1.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/github/github new ssh key1.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/github/github new ssh key2.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/node/node page download.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/node/node install.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/node/node check.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/hexo/hexo init blog.png">
+<meta property="og:image" content="http://blog.zhangjian.io/images/hexo/hexo blog page.png">
+<meta property="og:updated_time" content="2017-07-27T02:22:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo 快速搭建个人博客">
+<meta name="twitter:description" content="刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！我的博客地址：kim’s blog 有兴趣的朋友可以看下">
+<meta name="twitter:image" content="http://blog.zhangjian.io/images/github/github new project1.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
 
-准备Github 账号Github是什么?各位老司机不用我多说你们也懂"><meta name="keywords" content="Hexo, Android ,Go ,Golang,git"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">小猿の酒馆·</a></h3><div class="description"><p>“Life is too short, don’t live the same day twice.”</p></div></div></div><ul class="social-links"><li><a href="https://api.prprpr.me/weibo/rss/5013654112"><i class="fa fa-rss"></i></a></li><li><a href="http://github.com/XiaoZhangJian"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/resume">简历</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Hexo 快速搭建个人博客</a></h3></div><div class="post-content"><meta name="description" content="Hexo + GitHub 快速搭建自己的博客">
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-2017-04-21-hexo-hello world" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav class="mobile-nav">
+    <h1 class="nickname">小猿の酒馆·</h1>
+    <ul class="mobile-nav-menu">
+      <label for="mobile-menu-toggle"><a>&#9776; Menu</a></label>
+      <input type="checkbox" id="mobile-menu-toggle"/>
+      <ul class="mobile-nav-link">
+        
+        <a href="/">Home</a>
+        
+        <a href="/archives">Archives</a>
+        
+        <a href="/resume">Resume</a>
+        
+        <a href="/about">About</a>
+        
+      </ul>
+    </ul>
+  </nav>
+	
+		<nav id="main-nav" class="main-nav nav-left">
+	
+	
+	  <a class="main-nav-link" href="/">Home</a>
+	
+	  <a class="main-nav-link" href="/archives">Archives</a>
+	
+	  <a class="main-nav-link" href="/resume">Resume</a>
+	
+	  <a class="main-nav-link" href="/about">About</a>
+	
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo 快速搭建个人博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <meta name="description" content="Hexo + GitHub 快速搭建自己的博客">
 
 <p>刚开始接触Hexo时候遇见各种坑，各种找资料，终于解决了！第一次写博客，因为搭建这个博客网站就是为了记录下自己学习过的东西，生怕忘了就尴尬了！可能写的不太好，我会努力的！<br>我的博客地址：<a href="http://www.kimsblog.me" target="_blank" rel="external">kim’s blog</a> 有兴趣的朋友可以看下</p>
 <a id="more"></a>
@@ -35,13 +130,157 @@
 <!-- ![福利图](/images/meizi/meizi1.jpg) -->
 <!-- ## 前言 -->
 <!-- 看看妹子解解乏，呼呼， -->
-</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2017-04-21</span><i class="fa fa-tag"></i><a class="tag" href="/categories/博客搭建/" title="博客搭建">博客搭建 </a><a class="tag" href="/tags/博客搭建/" title="博客搭建">博客搭建 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://blog.zhangjian.io/2017/04/21/2017-04-21-hexo-hello world/,小猿の酒馆·,Hexo 快速搭建个人博客,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2017/05/22/2017-05-22-android-获取mac地址/" title="关于获取android6.0的mac地址">上一篇</a></li></ul></div><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7/dist/Valine.min.js?v=undefined"></script><script>var valine = new Valine({
-  el:'#vcomments',
-  notify:false || false, 
-  verify:false|| false, 
-  app_id:'YgV7zDiGcw5aSQEvwdE6YYkw-gzGzoHsz',
-  app_key:'mkEexIJkspfuNymkt6owTOQk',
-  placeholder:'ヾﾉ≧∀≦)o来啊，快活啊!',
-  path: window.location.pathname,
-  avatar:'monsterid'
-})</script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/jquery.baidu.js"></script></body></html>
+
+      
+      
+        <div id="donate" class="donate">
+          <a id="github" href="https://github.com/XiaoZhangJian" target="_blank" class="pos-f tr3" title="Github"></a>
+          <div id="DonateText" class="tr3">Donate</div>
+          <ul id="donateBox" class="list pos-f tr3">
+            <!-- <li id="PayPal"><a href="https://www.paypal.me/geekplux" target="_blank">PayPal</a></li> -->
+            <!-- <li id="BTC" data-footnote="Copy addres and show QRCode"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li> -->
+            <li id="AliPay">AliPay</li>
+            <li id="WeChat">WeChat</li>
+          </ul>
+          <div id="QRBox" class="pos-f left-100">
+            <div id="BTCQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/bitcoin.png)"></div>
+            <div id="AliPayQR" class="MainBox" style="background-image: url(https://raw.githubusercontent.com/wiki/XiaoZhangJian/ImageCarsh/alipayQR.png)"></div>
+            <div id="WeChatQR" class="MainBox" style="background-image: url(https://raw.githubusercontent.com/wiki/XiaoZhangJian/ImageCarsh/wechatQR.png)"></div>
+          </div>
+          <!-- Bitcoin 账号 -->
+          <input id="btc-key" type="text" value="1AVngxh56oLvAzXsEFnzccUohZdHswjC7j" readonly="readonly">
+        </div>
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/04/21/2017-04-21-hexo-hello world/" class="article-date">
+  <time datetime="2017-04-20T16:00:00.000Z" itemprop="datePublished">2017-04-21</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/博客搭建/">博客搭建</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客搭建/">博客搭建</a></li></ul>
+
+
+          </li>
+        
+      
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2017/05/22/2017-05-22-android-获取mac地址/" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          关于获取android6.0的mac地址
+        
+      </div>
+    </a>
+  
+  
+    <span id="article-nav-older" class="article-nav-link-wrap older"></span>
+  
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+
+
+  <section id="comments" class="comments">
+    <div id="valine_container"></div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>When you want to give up, think about what makes you insist on here. – kobe Bryant.</p>
+
+
+      </div>
+    </footer>
+
+      
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+  <script>
+      var GUEST_INFO = ['nick','mail','link'];
+      var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+      });
+      var notify = 'false' == true;
+      var verify = 'false' == true;
+      var valine = new Valine();
+      valine.init({
+          el: '#valine_container',
+          notify: notify,
+          verify: verify,
+          appId: "YgV7zDiGcw5aSQEvwdE6YYkw-gzGzoHsz",
+          appKey: "mkEexIJkspfuNymkt6owTOQk",
+          placeholder: "Just go go",
+          pageSize:'10',
+          avatar:'mm',
+          lang:'zh-cn'
+      })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3/dist/html5shiv.min.js"></script><![endif]-->
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
