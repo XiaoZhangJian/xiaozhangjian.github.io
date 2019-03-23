@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="小猿の酒馆·">
 <meta property="og:description" content="最近接触6.0,发现使用单纯的wifiManager.getConnectionInfo().getMacAddress();方法获取不到MAc地址。后来Google一下发现 Google对硬件信息的访问，其管控更加严格。SD 卡的读写，除了权限声明之外，还应该动态请求，否则就会被禁止。至于 MAC 网络地址的获取，相应的 API 返回的最新结果都是 02:00:00:00:00:00 这个固定">
 <meta property="og:image" content="http://img.blog.csdn.net/20160512135937593">
-<meta property="og:updated_time" content="2017-07-27T02:22:20.000Z">
+<meta property="og:updated_time" content="2019-03-23T09:49:40.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于获取android6.0的mac地址">
 <meta name="twitter:description" content="最近接触6.0,发现使用单纯的wifiManager.getConnectionInfo().getMacAddress();方法获取不到MAc地址。后来Google一下发现 Google对硬件信息的访问，其管控更加严格。SD 卡的读写，除了权限声明之外，还应该动态请求，否则就会被禁止。至于 MAC 网络地址的获取，相应的 API 返回的最新结果都是 02:00:00:00:00:00 这个固定">
@@ -45,9 +45,11 @@
         
         <a href="/archives">Archives</a>
         
-        <a href="/resume">Resume</a>
+        <a href="/reading">Reading</a>
         
         <a href="/about">About</a>
+        
+        <a href="/resume">简历</a>
         
       </ul>
     </ul>
@@ -60,9 +62,11 @@
 	
 	  <a class="main-nav-link" href="/archives">Archives</a>
 	
-	  <a class="main-nav-link" href="/resume">Resume</a>
+	  <a class="main-nav-link" href="/reading">Reading</a>
 	
 	  <a class="main-nav-link" href="/about">About</a>
+	
+	  <a class="main-nav-link" href="/resume">简历</a>
 	
   </nav>
 </header>
@@ -97,6 +101,7 @@
 <p>这样就可以正常的获取到6.0的mac地址了!希望能帮助大家</p>
 
       
+      <!-- post.hideen 隐藏属性 -->
       
         <div id="donate" class="donate">
           <a id="github" href="https://github.com/XiaoZhangJian" target="_blank" class="pos-f tr3" title="Github"></a>
@@ -114,7 +119,7 @@
           </div>
           <!-- Bitcoin 账号 -->
           <input id="btc-key" type="text" value="1AVngxh56oLvAzXsEFnzccUohZdHswjC7j" readonly="readonly">
-        </div>
+        </div>      
       
     </div>
     <footer class="article-footer">
@@ -137,7 +142,15 @@
 
           </li>
         
-        
+        <!-- 
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac地址/">mac地址</a></li></ul>
+
+
+          </li>
+         -->
       
         <hr/>
       </ul>
@@ -168,16 +181,17 @@
   
 </article>
 
+  
 
+  
 
+  
 
-
-
-
-
-  <section id="comments" class="comments">
-    <div id="valine_container"></div>
-  </section>
+  
+    <section id="comments" class="comments">
+      <div id="valine_container"></div>
+    </section>
+  
 
 
 

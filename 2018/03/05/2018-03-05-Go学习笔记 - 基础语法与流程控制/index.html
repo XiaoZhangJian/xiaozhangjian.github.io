@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://blog.zhangjian.io/2018/03/05/2018-03-05-Go学习笔记 - 基础语法与流程控制/index.html">
 <meta property="og:site_name" content="小猿の酒馆·">
 <meta property="og:description" content="基础语法先上个栗子:hello.go123456789// package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包。package main import &amp;quot;fmt&amp;quot; // 引用的fmt 库// main 函数是执行入口func main()&amp;#123;   fmt.Println(&amp;quot;Hello,World!&amp;quot;)">
-<meta property="og:updated_time" content="2018-03-05T06:28:34.021Z">
+<meta property="og:updated_time" content="2019-03-23T09:42:31.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go学习笔记 - 基础语法与流程控制">
 <meta name="twitter:description" content="基础语法先上个栗子:hello.go123456789// package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包。package main import &amp;quot;fmt&amp;quot; // 引用的fmt 库// main 函数是执行入口func main()&amp;#123;   fmt.Println(&amp;quot;Hello,World!&amp;quot;)">
@@ -43,9 +43,11 @@
         
         <a href="/archives">Archives</a>
         
-        <a href="/resume">Resume</a>
+        <a href="/reading">Reading</a>
         
         <a href="/about">About</a>
+        
+        <a href="/resume">简历</a>
         
       </ul>
     </ul>
@@ -58,9 +60,11 @@
 	
 	  <a class="main-nav-link" href="/archives">Archives</a>
 	
-	  <a class="main-nav-link" href="/resume">Resume</a>
+	  <a class="main-nav-link" href="/reading">Reading</a>
 	
 	  <a class="main-nav-link" href="/about">About</a>
+	
+	  <a class="main-nav-link" href="/resume">简历</a>
 	
   </nav>
 </header>
@@ -111,6 +115,7 @@
 <p><code>for</code> 配合 <code>range</code> 可以用于读取<code>slice</code>和<code>map</code>的数据：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">for k,v := range map&#123;</div><div class="line">	fmt.Println(&quot;map key :&quot;,k)</div><div class="line">	fmt.Println(&quot;map value :&quot;,v)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3>
       
+      <!-- post.hideen 隐藏属性 -->
       
         <div id="donate" class="donate">
           <a id="github" href="https://github.com/XiaoZhangJian" target="_blank" class="pos-f tr3" title="Github"></a>
@@ -128,7 +133,7 @@
           </div>
           <!-- Bitcoin 账号 -->
           <input id="btc-key" type="text" value="1AVngxh56oLvAzXsEFnzccUohZdHswjC7j" readonly="readonly">
-        </div>
+        </div>      
       
     </div>
     <footer class="article-footer">
@@ -151,7 +156,15 @@
 
           </li>
         
-        
+        <!-- 
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/go、后端、服务器、爬虫/">go、后端、服务器、爬虫</a></li></ul>
+
+
+          </li>
+         -->
       
         <hr/>
       </ul>
@@ -182,16 +195,17 @@
   
 </article>
 
+  
 
+  
 
+  
 
-
-
-
-
-  <section id="comments" class="comments">
-    <div id="valine_container"></div>
-  </section>
+  
+    <section id="comments" class="comments">
+      <div id="valine_container"></div>
+    </section>
+  
 
 
 

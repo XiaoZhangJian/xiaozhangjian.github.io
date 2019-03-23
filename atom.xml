@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.zhangjian.io/"/>
-  <updated>2018-09-15T11:54:29.413Z</updated>
+  <updated>2019-03-23T09:43:45.040Z</updated>
   <id>http://blog.zhangjian.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.zhangjian.io/2018/09/15/2018-09-15-git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%B0%8F%E8%AE%B0/"/>
     <id>http://blog.zhangjian.io/2018/09/15/2018-09-15-git常用命令小记/</id>
     <published>2018-09-15T11:50:33.000Z</published>
-    <updated>2018-09-15T11:54:29.413Z</updated>
+    <updated>2019-03-23T09:43:45.040Z</updated>
     
     <content type="html"><![CDATA[<p><strong># git基本操作</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">mkdir test</div><div class="line">cd test</div><div class="line"># git初始化本地仓库</div><div class="line">git init </div><div class="line"># 创建一个readme文件</div><div class="line">touch README.md</div><div class="line"># 添加新创建的文件到本地仓库</div><div class="line">git add .</div><div class="line"># 把新的文件提交到本地仓库</div><div class="line">git commit -m &apos;提交说明&apos;</div><div class="line"># 连接github远程仓库</div><div class="line">git remote add origin git@github.com:XiaoZhangJian/Test.git</div><div class="line"># 把本地仓库提交到github的主分支上</div><div class="line">git push origin master </div><div class="line"></div><div class="line"># 创建分支</div><div class="line">git branch test-branch</div><div class="line"></div><div class="line"># 查看分支</div><div class="line">git branch</div><div class="line"></div><div class="line"># 切换分支</div><div class="line">git checkout test-branch </div><div class="line"></div><div class="line">touch test.txt</div><div class="line">git add .</div><div class="line">git commit -m &apos;change&apos;</div><div class="line"># 把新的文件提交到分支</div><div class="line">git push origin test-branch </div><div class="line"></div><div class="line"># 子分支与主分支合并</div><div class="line">git checkout master </div><div class="line">git merge  origin/test-branch</div><div class="line">git push origin master</div></pre></td></tr></table></figure></p>
 <p><strong># git如何pull request 操作</strong></p>
@@ -60,8 +60,10 @@
     
     </summary>
     
-      <category term="git,github" scheme="http://blog.zhangjian.io/categories/git-github/"/>
+      <category term="版本管理工具" scheme="http://blog.zhangjian.io/categories/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
     
+    
+      <category term="git、版本管理工具" scheme="http://blog.zhangjian.io/tags/git%E3%80%81%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -70,7 +72,7 @@
     <link href="http://blog.zhangjian.io/2018/06/06/2018-06-06-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BD%BF%E7%94%A8Delve%E8%B0%83%E8%AF%95golang%E4%BB%A3%E7%A0%81/"/>
     <id>http://blog.zhangjian.io/2018/06/06/2018-06-06-Go学习笔记-使用Delve调试golang代码/</id>
     <published>2018-06-06T13:26:24.000Z</published>
-    <updated>2018-06-06T13:50:46.421Z</updated>
+    <updated>2019-03-23T09:42:58.954Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-安装-Delve"><a href="#1-安装-Delve" class="headerlink" title="1.安装 Delve"></a>1.<strong>安装 Delve</strong></h4><p><strong>必备条件：</strong> 确保有一个合适的编译工具链</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
@@ -236,8 +238,10 @@
     
     </summary>
     
-      <category term="Go,后端,debug" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF-debug/"/>
+      <category term="后端" scheme="http://blog.zhangjian.io/categories/%E5%90%8E%E7%AB%AF/"/>
     
+    
+      <category term="go、后端、服务器、爬虫、debug" scheme="http://blog.zhangjian.io/tags/go%E3%80%81%E5%90%8E%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E7%88%AC%E8%99%AB%E3%80%81debug/"/>
     
   </entry>
   
@@ -246,7 +250,7 @@
     <link href="http://blog.zhangjian.io/2018/03/05/2018-03-05-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E4%B8%8E%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/"/>
     <id>http://blog.zhangjian.io/2018/03/05/2018-03-05-Go学习笔记 - 基础语法与流程控制/</id>
     <published>2018-03-05T06:25:26.000Z</published>
-    <updated>2018-03-05T06:28:34.021Z</updated>
+    <updated>2019-03-23T09:42:31.519Z</updated>
     
     <content type="html"><![CDATA[<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><p>先上个栗子:<code>hello.go</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">// package main表示一个可独立执行的程序，每个 Go 应用程序都包含一个名为 main 的包。</div><div class="line">package main</div><div class="line"> </div><div class="line">import &quot;fmt&quot; // 引用的fmt 库</div><div class="line"></div><div class="line">// main 函数是执行入口</div><div class="line">func main()&#123; </div><div class="line">  fmt.Println(&quot;Hello,World!&quot;) // 输出Hello，World！</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h5 id="变量定义："><a href="#变量定义：" class="headerlink" title="变量定义："></a>变量定义：</h5><p>Go语言里面定义变量有多种方式。关键字使用<code>var</code>。<br>变量定义格式： <code>关键字(var)</code> <code>变量名(i)</code> <code>变量类型(int)</code>  与其他语言不同的是<code>变量名</code>在<code>变量类型</code>之前 。<br>go语言变量定义后要求是有一个初始值，不像Java一样定义以后是null。<br>go语言中定义变量要求比较严格，只要定义 必须使用。</p>
@@ -286,6 +290,8 @@
       <category term="Go,后端" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF/"/>
     
     
+      <category term="go、后端、服务器、爬虫" scheme="http://blog.zhangjian.io/tags/go%E3%80%81%E5%90%8E%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E7%88%AC%E8%99%AB/"/>
+    
   </entry>
   
   <entry>
@@ -293,7 +299,7 @@
     <link href="http://blog.zhangjian.io/2018/03/01/2018-03-01-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%AE%89%E8%A3%85%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
     <id>http://blog.zhangjian.io/2018/03/01/2018-03-01-Go学习笔记 - 安装与环境变量/</id>
     <published>2018-03-01T07:03:44.000Z</published>
-    <updated>2018-03-01T07:07:40.508Z</updated>
+    <updated>2019-03-23T09:42:14.320Z</updated>
     
     <content type="html"><![CDATA[<h3 id="安装-Go"><a href="#安装-Go" class="headerlink" title="安装 Go"></a>安装 Go</h3><p>安装Go语言比较简单直接进入 <a href="https://studygolang.com/dl" target="_blank" rel="external">https://studygolang.com/dl</a> 或 <a href="https://golang.org/dl/" target="_blank" rel="external">https://golang.org/dl(科学上网)</a>，下载一个跟设备相同系统的安装包安装即可。<br><a id="more"></a><br><strong>Go安装演示 OS X :</strong></p>
 <div align="center"><br><img src="/images/go/go_down_pkg.gif" width="“500"" height="“300"" alt="“如何下载安装包”/"><br></div>
@@ -325,6 +331,8 @@
       <category term="Go,后端" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF/"/>
     
     
+      <category term="go、后端、服务器、爬虫" scheme="http://blog.zhangjian.io/tags/go%E3%80%81%E5%90%8E%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E7%88%AC%E8%99%AB/"/>
+    
   </entry>
   
   <entry>
@@ -332,7 +340,7 @@
     <link href="http://blog.zhangjian.io/2018/03/01/2018-03-01-Go%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20-%20%E5%88%9D%E8%AF%86Go/"/>
     <id>http://blog.zhangjian.io/2018/03/01/2018-03-01-Go学习笔记 - 初识Go/</id>
     <published>2018-03-01T02:46:18.000Z</published>
-    <updated>2018-03-01T07:04:09.483Z</updated>
+    <updated>2019-03-23T09:42:26.068Z</updated>
     
     <content type="html"><![CDATA[<h3 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h3><p>Go 语言起源 2007 年，并于 2009 年正式对外发布。它从 2009 年 9 月 21 日开始作为谷歌公司 20% 兼职项目，即相关员工利用 20% 的空余时间来参与 Go 语言的研发工作。该项目的三位领导者均是著名的 IT 工程师：Robert Griesemer，参与开发 Java HotSpot 虚拟机；Rob Pike，Go 语言项目总负责人，贝尔实验室 Unix 团队成员，参与的项目包括 Plan 9，Inferno 操作系统和 Limbo 编程语言；Ken Thompson，贝尔实验室 Unix 团队成员，C 语言、Unix 和 Plan 9 的创始人之一，与 Rob Pike 共同开发了 UTF-8 字符集规范。自 2008 年 1 月起，Ken Thompson 就开始研发一款以 C 语言为目标结果的编译器来拓展 Go 语言的设计思想。<br><a id="more"></a><br><strong>这是一个由计算机领域 <code>“发明之父”</code> 所组成的黄金团队，他们对系统编程语言，操作系统和并行都有着非常深刻的见解</strong></p>
 <p><img src="/images/go/1.1.designers_of_Go.jpg" alt=""><br>图 1.1 Go 语言设计者：<strong>Griesemer</strong>、<strong>Thompson</strong> 和 <strong>Pike</strong></p>
@@ -353,6 +361,8 @@
       <category term="Go,后端" scheme="http://blog.zhangjian.io/categories/Go-%E5%90%8E%E7%AB%AF/"/>
     
     
+      <category term="go、后端、服务器、爬虫" scheme="http://blog.zhangjian.io/tags/go%E3%80%81%E5%90%8E%E7%AB%AF%E3%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%81%E7%88%AC%E8%99%AB/"/>
+    
   </entry>
   
   <entry>
@@ -360,7 +370,7 @@
     <link href="http://blog.zhangjian.io/2017/12/01/2017-12-01-Axel%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/"/>
     <id>http://blog.zhangjian.io/2017/12/01/2017-12-01-Axel多线程下载工具/</id>
     <published>2017-12-01T05:34:05.000Z</published>
-    <updated>2017-12-01T05:34:08.000Z</updated>
+    <updated>2019-03-23T09:41:53.301Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>下载地址： <a href="http://rudix.org/packages/axel.html" target="_blank" rel="external">http://rudix.org/packages/axel.html</a></p>
@@ -379,8 +389,10 @@
     
     </summary>
     
-      <category term="mac、linux、工具" scheme="http://blog.zhangjian.io/categories/mac%E3%80%81linux%E3%80%81%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://blog.zhangjian.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
+    
+      <category term="mac、linux、下载" scheme="http://blog.zhangjian.io/tags/mac%E3%80%81linux%E3%80%81%E4%B8%8B%E8%BD%BD/"/>
     
   </entry>
   
@@ -389,7 +401,7 @@
     <link href="http://blog.zhangjian.io/2017/09/10/2017-09-10-Anaconda%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/"/>
     <id>http://blog.zhangjian.io/2017/09/10/2017-09-10-Anaconda入门使用/</id>
     <published>2017-09-10T15:34:17.000Z</published>
-    <updated>2017-09-11T01:13:44.000Z</updated>
+    <updated>2019-03-23T09:41:22.308Z</updated>
     
     <content type="html"><![CDATA[<p><strong>序</strong></p>
 <p><a href="https://www.continuum.io/why-anaconda" target="_blank" rel="external">Anaconda</a>是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。Anaconda利用工具/命令<code>conda</code>来进行package和environment的管理，并且已经包含了Python和相关的配套工具。</p>
@@ -425,6 +437,8 @@
       <category term="深度学习" scheme="http://blog.zhangjian.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
+      <category term="工具、Python管理器" scheme="http://blog.zhangjian.io/tags/%E5%B7%A5%E5%85%B7%E3%80%81Python%E7%AE%A1%E7%90%86%E5%99%A8/"/>
+    
   </entry>
   
   <entry>
@@ -432,7 +446,7 @@
     <link href="http://blog.zhangjian.io/2017/07/27/2017-07-27-Android%E6%B7%B7%E6%B7%86%E9%85%8D%E7%BD%AE%E8%AE%B0%E5%BD%95/"/>
     <id>http://blog.zhangjian.io/2017/07/27/2017-07-27-Android混淆配置记录/</id>
     <published>2017-07-27T14:49:30.000Z</published>
-    <updated>2017-07-27T15:19:51.000Z</updated>
+    <updated>2019-03-23T09:40:54.986Z</updated>
     
     <content type="html"><![CDATA[<p>最近项目中使用的混淆，进行一个笔记记录。</p>
 <p>主要参考  <a href="http://www.jianshu.com/p/f3455ecaa56e" target="_blank" rel="external">5分钟搞定android混淆</a> </p>
@@ -449,6 +463,8 @@
       <category term="Android" scheme="http://blog.zhangjian.io/categories/Android/"/>
     
     
+      <category term="Android、代码混淆" scheme="http://blog.zhangjian.io/tags/Android%E3%80%81%E4%BB%A3%E7%A0%81%E6%B7%B7%E6%B7%86/"/>
+    
   </entry>
   
   <entry>
@@ -456,7 +472,7 @@
     <link href="http://blog.zhangjian.io/2017/07/21/2017-07-21-android-%E5%B7%A5%E4%BD%9C%E4%B8%AD%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://blog.zhangjian.io/2017/07/21/2017-07-21-android-工作中遇见的问题/</id>
     <published>2017-07-21T05:23:01.000Z</published>
-    <updated>2017-12-01T05:10:34.000Z</updated>
+    <updated>2019-03-23T09:53:03.898Z</updated>
     
     <content type="html"><![CDATA[<p>主要记录一些，自己在工作/学习遇见的问题记录下解决方法（记忆力不太好）</p>
 <a id="more"></a>
@@ -484,6 +500,10 @@
     
       <category term="Android" scheme="http://blog.zhangjian.io/categories/Android/"/>
     
+      <category term="Bug" scheme="http://blog.zhangjian.io/categories/Android/Bug/"/>
+    
+    
+      <category term="Bug" scheme="http://blog.zhangjian.io/tags/Bug/"/>
     
   </entry>
   
@@ -492,7 +512,7 @@
     <link href="http://blog.zhangjian.io/2017/05/22/2017-05-22-android-%E8%8E%B7%E5%8F%96mac%E5%9C%B0%E5%9D%80/"/>
     <id>http://blog.zhangjian.io/2017/05/22/2017-05-22-android-获取mac地址/</id>
     <published>2017-05-21T16:00:00.000Z</published>
-    <updated>2017-07-27T02:22:20.000Z</updated>
+    <updated>2019-03-23T09:49:40.808Z</updated>
     
     <content type="html"><![CDATA[<p> 最近接触6.0,发现使用单纯的<code>wifiManager.getConnectionInfo().getMacAddress();</code>方法获取不到MAc地址。后来Google一下发现 Google对硬件信息的访问，其管控更加严格。SD 卡的读写，除了权限声明之外，还应该动态请求，否则就会被禁止。至于 MAC 网络地址的获取，相应的 API 返回的最新结果都是 <code>02:00:00:00:00:00</code> 这个固定值。可以参见 <a href="http://stackoverflow.com/questions/33159224/getting-mac-address-in-android-6-0" target="_blank" rel="external">Getting MAC address in Android 6.0</a>。<br> 按照官方解释，这是为了<code>更好的数据保护</code>，可以参见<a href="https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html#behavior-hardware-id" target="_blank" rel="external"> Android 6.0 变化</a>一文中 <code>Access to Hardware Identifier</code> 一节。</p>
 <a id="more"></a>
@@ -516,6 +536,10 @@
       <category term="Android" scheme="http://blog.zhangjian.io/categories/Android/"/>
     
     
+      <category term="Android" scheme="http://blog.zhangjian.io/tags/Android/"/>
+    
+      <category term="mac地址" scheme="http://blog.zhangjian.io/tags/mac%E5%9C%B0%E5%9D%80/"/>
+    
   </entry>
   
   <entry>
@@ -523,7 +547,7 @@
     <link href="http://blog.zhangjian.io/2017/04/21/2017-04-21-hexo-hello%20world/"/>
     <id>http://blog.zhangjian.io/2017/04/21/2017-04-21-hexo-hello world/</id>
     <published>2017-04-20T16:00:00.000Z</published>
-    <updated>2017-07-27T02:22:31.000Z</updated>
+    <updated>2019-03-23T09:39:17.022Z</updated>
     
     <content type="html"><![CDATA[<meta name="description" content="Hexo + GitHub 快速搭建自己的博客">
 

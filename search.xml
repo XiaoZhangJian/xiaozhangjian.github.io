@@ -40,10 +40,16 @@
       
         <categories>
             
-            <category> git,github </category>
+            <category> 版本管理工具 </category>
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> git、版本管理工具 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -210,10 +216,16 @@
       
         <categories>
             
-            <category> Go,后端,debug </category>
+            <category> 后端 </category>
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> go、后端、服务器、爬虫、debug </tag>
+            
+        </tags>
         
     </entry>
     
@@ -256,6 +268,12 @@
         </categories>
         
         
+        <tags>
+            
+            <tag> go、后端、服务器、爬虫 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -289,6 +307,12 @@
         </categories>
         
         
+        <tags>
+            
+            <tag> go、后端、服务器、爬虫 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -311,6 +335,12 @@
         </categories>
         
         
+        <tags>
+            
+            <tag> go、后端、服务器、爬虫 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -328,10 +358,16 @@
       
         <categories>
             
-            <category> mac、linux、工具 </category>
+            <category> 工具 </category>
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> mac、linux、下载 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -369,6 +405,12 @@
         </categories>
         
         
+        <tags>
+            
+            <tag> 工具、Python管理器 </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -385,6 +427,12 @@
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Android、代码混淆 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -413,8 +461,16 @@
             
             <category> Android </category>
             
+            <category> Bug </category>
+            
         </categories>
         
+        
+        <tags>
+            
+            <tag> Bug </tag>
+            
+        </tags>
         
     </entry>
     
@@ -440,6 +496,14 @@
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> Android </tag>
+            
+            <tag> mac地址 </tag>
+            
+        </tags>
         
     </entry>
     
